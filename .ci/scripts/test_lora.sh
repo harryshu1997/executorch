@@ -133,7 +133,8 @@ else
 fi
 
 ### QUANTIZATION & PROGRAM DATA SEPARATION ###
-EXPECTED_QUANT_PREFIX="<|im_start|>user Calculate 15% of 80?<|im_end|><|im_start|>assistant:
+EXPECTED_QUANT_PREFIX="<|im_start|>user Calculate 15% of 80?<|im_end|><|im_start|>assistant: me
+<think>
 <think>
 Okay, so I need to calculate 15% of 80."
 EXPECTED_QUANT_LORA_PREFIX="
