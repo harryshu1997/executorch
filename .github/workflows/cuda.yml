@@ -125,7 +125,7 @@ jobs:
 
         # The Triton-compiled .so files in the CUDA backend require GLIBCXX_3.4.29
         # which the default system libstdc++ doesn't have. Install a newer one.
-        conda install -y -c conda-forge 'libstdcxx-ng>=12'
+        conda install -y -c conda-forge --override-channels 'libstdcxx-ng>=12'
         export LD_LIBRARY_PATH=/opt/conda/lib:$LD_LIBRARY_PATH
 
         # Build ExecuTorch with CUDA support
@@ -433,7 +433,7 @@ jobs:
         # The embedded .so files in the CUDA blob require GLIBCXX_3.4.29
         # which the default conda libstdc++ doesn't have. Install a newer
         # libstdc++ from conda-forge and use it via LD_PRELOAD.
-        conda install -y -c conda-forge 'libstdcxx-ng>=12'
+        conda install -y -c conda-forge --override-channels 'libstdcxx-ng>=12'
         export LD_LIBRARY_PATH=/opt/conda/lib:$LD_LIBRARY_PATH
         # Verify the new libstdc++ has GLIBCXX_3.4.29
         strings /opt/conda/lib/libstdc++.so.6 | grep GLIBCXX_3.4.29 || {

@@ -39,7 +39,7 @@ install_python() {
 
   # From https://github.com/pytorch/pytorch/blob/main/.ci/docker/common/install_conda.sh
   if [[ $(uname -m) == "aarch64" ]]; then
-    conda_install "openblas==0.3.29=*openmp*" -c conda-forge
+    conda_install "openblas==0.3.29=*openmp*" -c conda-forge --override-channels
   else
     conda_install mkl=2022.1.0 mkl-include=2022.1.0
   fi
