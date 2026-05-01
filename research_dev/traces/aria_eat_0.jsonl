@@ -1,0 +1,833 @@
+{"t": 0.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 0}}
+{"t": 0.0, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 0, "clip_start_s": 0.0, "clip_end_s": 2.8, "speaker": "SELF", "transcript": "I'm so happy you guys can make it."}}
+{"t": 0.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 1}}
+{"t": 1.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 2}}
+{"t": 1.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 3}}
+{"t": 2.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 4}}
+{"t": 2.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 5}}
+{"t": 3.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 6}}
+{"t": 3.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 2, "clip_start_s": 3.4, "clip_end_s": 4.0, "speaker": "OTHER", "transcript": "Glad to be here."}}
+{"t": 3.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 7}}
+{"t": 4.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 8}}
+{"t": 4.16, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 1, "clip_start_s": 4.16, "clip_end_s": 4.48, "speaker": "SELF", "transcript": "Yay."}}
+{"t": 4.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 9}}
+{"t": 4.84, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 3, "clip_start_s": 4.84, "clip_end_s": 5.14, "speaker": "OTHER", "transcript": "That's good."}}
+{"t": 5.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 10}}
+{"t": 5.41, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 4, "clip_start_s": 5.41, "clip_end_s": 10.18, "speaker": "SELF", "transcript": "So i made everyone a turkey sandwich with some avocado, tomatoes,"}}
+{"t": 5.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 11}}
+{"t": 6.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 12}}
+{"t": 6.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 13}}
+{"t": 7.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 14}}
+{"t": 7.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 15}}
+{"t": 8.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 16}}
+{"t": 8.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 17}}
+{"t": 9.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 18}}
+{"t": 9.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 19}}
+{"t": 10.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 20}}
+{"t": 10.18, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 5, "clip_start_s": 10.18, "clip_end_s": 12.58, "speaker": "SELF", "transcript": "and yummy, yummy cheese."}}
+{"t": 10.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 21}}
+{"t": 11.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 22}}
+{"t": 11.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 23}}
+{"t": 12.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 24}}
+{"t": 12.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 25}}
+{"t": 13.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 26}}
+{"t": 13.12, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 6, "clip_start_s": 13.12, "clip_end_s": 13.6, "speaker": "OTHER", "transcript": "It looks delicious."}}
+{"t": 13.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 27}}
+{"t": 13.6, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 7, "clip_start_s": 13.6, "clip_end_s": 15.22, "speaker": "OTHER", "transcript": "I mean, i decided to try it."}}
+{"t": 14.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 28}}
+{"t": 14.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 29}}
+{"t": 15.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 30}}
+{"t": 15.22, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 8, "clip_start_s": 15.22, "clip_end_s": 18.46, "speaker": "OTHER", "transcript": "I'm excited for the avocado."}}
+{"t": 15.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 31}}
+{"t": 16.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 32}}
+{"t": 16.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 33}}
+{"t": 17.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 34}}
+{"t": 17.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 35}}
+{"t": 18.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 36}}
+{"t": 18.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 9, "clip_start_s": 18.46, "clip_end_s": 19.66, "speaker": "OTHER", "transcript": "I love all the products."}}
+{"t": 18.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 37}}
+{"t": 19.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 38}}
+{"t": 19.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 39}}
+{"t": 19.66, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 10, "clip_start_s": 19.66, "clip_end_s": 19.96, "speaker": "OTHER", "transcript": "Oh yeah."}}
+{"t": 19.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 11, "clip_start_s": 19.96, "clip_end_s": 22.06, "speaker": "OTHER", "transcript": "All colors are good."}}
+{"t": 20.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 40}}
+{"t": 20.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 41}}
+{"t": 21.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 42}}
+{"t": 21.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 43}}
+{"t": 22.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 44}}
+{"t": 22.06, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 12, "clip_start_s": 22.06, "clip_end_s": 23.32, "speaker": "OTHER", "transcript": "Really fresh"}}
+{"t": 22.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 45}}
+{"t": 23.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 46}}
+{"t": 23.32, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 13, "clip_start_s": 23.32, "clip_end_s": 23.32, "speaker": "OTHER", "transcript": "."}}
+{"t": 23.32, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 14, "clip_start_s": 23.32, "clip_end_s": 30.7, "speaker": "OTHER", "transcript": "What have"}}
+{"t": 23.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 47}}
+{"t": 24.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 48}}
+{"t": 24.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 49}}
+{"t": 25.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 50}}
+{"t": 25.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 51}}
+{"t": 26.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 52}}
+{"t": 26.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 53}}
+{"t": 27.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 54}}
+{"t": 27.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 55}}
+{"t": 28.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 56}}
+{"t": 28.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 57}}
+{"t": 29.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 58}}
+{"t": 29.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 59}}
+{"t": 30.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 60}}
+{"t": 30.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 61}}
+{"t": 30.7, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 14, "transcript": "What have", "speaker": "OTHER"}}
+{"t": 30.7, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 15, "clip_start_s": 30.7, "clip_end_s": 31.06, "speaker": "OTHER", "transcript": "you been up today?"}}
+{"t": 31.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 62}}
+{"t": 31.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 63}}
+{"t": 32.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 64}}
+{"t": 32.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 65}}
+{"t": 33.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 66}}
+{"t": 33.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 67}}
+{"t": 34.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 68}}
+{"t": 34.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 16, "clip_start_s": 34.46, "clip_end_s": 38.74, "speaker": "SELF", "transcript": "You know, before you guys came over, the house was a mess."}}
+{"t": 34.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 69}}
+{"t": 35.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 70}}
+{"t": 35.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 71}}
+{"t": 36.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 72}}
+{"t": 36.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 73}}
+{"t": 37.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 74}}
+{"t": 37.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 75}}
+{"t": 38.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 76}}
+{"t": 38.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 77}}
+{"t": 39.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 78}}
+{"t": 39.04, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 17, "clip_start_s": 39.04, "clip_end_s": 39.34, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 39.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 79}}
+{"t": 39.7, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 18, "clip_start_s": 39.7, "clip_end_s": 41.44, "speaker": "SELF", "transcript": "So, i had to do some quick cleaning."}}
+{"t": 40.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 80}}
+{"t": 40.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 81}}
+{"t": 41.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 82}}
+{"t": 41.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 19, "clip_start_s": 41.46, "clip_end_s": 43.96, "speaker": "SELF", "transcript": "I went to the grocery store"}}
+{"t": 41.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 83}}
+{"t": 42.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 84}}
+{"t": 42.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 85}}
+{"t": 43.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 86}}
+{"t": 43.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 87}}
+{"t": 43.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 20, "clip_start_s": 43.96, "clip_end_s": 46.54, "speaker": "SELF", "transcript": ", that's where i got all these ingredients."}}
+{"t": 44.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 88}}
+{"t": 44.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 89}}
+{"t": 45.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 90}}
+{"t": 45.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 91}}
+{"t": 46.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 92}}
+{"t": 46.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 93}}
+{"t": 46.54, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 20, "transcript": ", that's where i got all these ingredients.", "speaker": "SELF"}}
+{"t": 46.54, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 21, "clip_start_s": 46.54, "clip_end_s": 48.46, "speaker": "SELF", "transcript": "But i forgot the mayo"}}
+{"t": 47.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 94}}
+{"t": 47.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 95}}
+{"t": 48.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 96}}
+{"t": 48.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 22, "clip_start_s": 48.46, "clip_end_s": 49.96, "speaker": "SELF", "transcript": ", so it might be a bit dry."}}
+{"t": 48.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 97}}
+{"t": 49.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 98}}
+{"t": 49.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 99}}
+{"t": 50.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 100}}
+{"t": 50.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 101}}
+{"t": 50.5, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 23, "clip_start_s": 50.5, "clip_end_s": 53.08, "speaker": "OTHER", "transcript": "Uh, it's okay."}}
+{"t": 51.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 102}}
+{"t": 51.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 103}}
+{"t": 52.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 104}}
+{"t": 52.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 105}}
+{"t": 53.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 106}}
+{"t": 53.08, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 24, "clip_start_s": 53.08, "clip_end_s": 53.74, "speaker": "OTHER", "transcript": "You got some"}}
+{"t": 53.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 107}}
+{"t": 53.74, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 25, "clip_start_s": 53.74, "clip_end_s": 55.18, "speaker": "OTHER", "transcript": "illuminator washing down."}}
+{"t": 54.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 108}}
+{"t": 54.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 109}}
+{"t": 55.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 110}}
+{"t": 55.39, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 26, "clip_start_s": 55.39, "clip_end_s": 56.98, "speaker": "SELF", "transcript": "Oh yeah, the strawberry lemonade."}}
+{"t": 55.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 111}}
+{"t": 56.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 112}}
+{"t": 56.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 113}}
+{"t": 56.98, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 27, "clip_start_s": 56.98, "clip_end_s": 58.06, "speaker": "SELF", "transcript": "Let me know how it is."}}
+{"t": 57.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 114}}
+{"t": 57.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 115}}
+{"t": 58.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 116}}
+{"t": 58.06, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 27, "transcript": "Let me know how it is.", "speaker": "SELF"}}
+{"t": 58.06, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 28, "clip_start_s": 58.06, "clip_end_s": 58.96, "speaker": "SELF", "transcript": "It's sugar"}}
+{"t": 58.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 117}}
+{"t": 58.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 29, "clip_start_s": 58.96, "clip_end_s": 59.2, "speaker": "SELF", "transcript": "-free."}}
+{"t": 59.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 118}}
+{"t": 59.2, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 30, "clip_start_s": 59.2, "clip_end_s": 64.36, "speaker": "SELF", "transcript": "Is it good?"}}
+{"t": 59.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 119}}
+{"t": 60.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 120}}
+{"t": 60.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 121}}
+{"t": 61.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 122}}
+{"t": 61.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 123}}
+{"t": 62.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 124}}
+{"t": 62.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 125}}
+{"t": 63.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 126}}
+{"t": 63.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 127}}
+{"t": 64.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 128}}
+{"t": 64.36, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 30, "transcript": "Is it good?", "speaker": "SELF"}}
+{"t": 64.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 129}}
+{"t": 64.75, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 31, "clip_start_s": 64.75, "clip_end_s": 65.14, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 65.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 130}}
+{"t": 65.14, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 32, "clip_start_s": 65.14, "clip_end_s": 66.1, "speaker": "OTHER", "transcript": "I actually like it."}}
+{"t": 65.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 131}}
+{"t": 66.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 132}}
+{"t": 66.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 133}}
+{"t": 67.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 134}}
+{"t": 67.0, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 33, "clip_start_s": 67.0, "clip_end_s": 67.0, "speaker": "SELF", "transcript": "Yay."}}
+{"t": 67.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 135}}
+{"t": 68.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 136}}
+{"t": 68.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 34, "clip_start_s": 68.38, "clip_end_s": 70.96, "speaker": "OTHER", "transcript": "It doesn't have the the bird."}}
+{"t": 68.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 137}}
+{"t": 69.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 138}}
+{"t": 69.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 139}}
+{"t": 70.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 140}}
+{"t": 70.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 141}}
+{"t": 71.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 142}}
+{"t": 71.04, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 35, "clip_start_s": 71.04, "clip_end_s": 72.22, "speaker": "OTHER", "transcript": "Is it"}}
+{"t": 71.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 143}}
+{"t": 72.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 144}}
+{"t": 72.22, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 35, "transcript": "Is it", "speaker": "OTHER"}}
+{"t": 72.22, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 36, "clip_start_s": 72.22, "clip_end_s": 73.06, "speaker": "OTHER", "transcript": "strawberry lemonade?"}}
+{"t": 72.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 145}}
+{"t": 73.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 146}}
+{"t": 73.06, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 37, "clip_start_s": 73.06, "clip_end_s": 73.48, "speaker": "OTHER", "transcript": "Mhm."}}
+{"t": 73.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 147}}
+{"t": 73.58, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 38, "clip_start_s": 73.58, "clip_end_s": 75.7, "speaker": "SELF", "transcript": "Or it's lemonade with strawberry."}}
+{"t": 74.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 148}}
+{"t": 74.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 149}}
+{"t": 75.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 150}}
+{"t": 75.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 151}}
+{"t": 75.753, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 39, "clip_start_s": 75.753, "clip_end_s": 76.42, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 76.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 152}}
+{"t": 76.42, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 40, "clip_start_s": 76.42, "clip_end_s": 77.2, "speaker": "OTHER", "transcript": "Oh okay."}}
+{"t": 76.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 153}}
+{"t": 77.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 154}}
+{"t": 77.2, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 41, "clip_start_s": 77.2, "clip_end_s": 77.74, "speaker": "OTHER", "transcript": "Yeah"}}
+{"t": 77.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 155}}
+{"t": 77.74, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 42, "clip_start_s": 77.74, "clip_end_s": 78.76, "speaker": "OTHER", "transcript": ", very specific."}}
+{"t": 78.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 156}}
+{"t": 78.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 157}}
+{"t": 79.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 158}}
+{"t": 79.12, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 43, "clip_start_s": 79.12, "clip_end_s": 79.48, "speaker": "SELF", "transcript": "Yeah."}}
+{"t": 79.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 159}}
+{"t": 79.92, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 44, "clip_start_s": 79.92, "clip_end_s": 81.4, "speaker": "SELF", "transcript": "In that order"}}
+{"t": 80.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 160}}
+{"t": 80.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 161}}
+{"t": 81.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 162}}
+{"t": 81.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 45, "clip_start_s": 81.4, "clip_end_s": 81.4, "speaker": "SELF", "transcript": "."}}
+{"t": 81.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 46, "clip_start_s": 81.4, "clip_end_s": 83.98, "speaker": "SELF", "transcript": "What"}}
+{"t": 81.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 163}}
+{"t": 82.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 164}}
+{"t": 82.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 165}}
+{"t": 83.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 166}}
+{"t": 83.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 167}}
+{"t": 83.98, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 47, "clip_start_s": 83.98, "clip_end_s": 85.18, "speaker": "SELF", "transcript": "has everyone been up to?"}}
+{"t": 84.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 168}}
+{"t": 84.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 169}}
+{"t": 85.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 170}}
+{"t": 85.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 171}}
+{"t": 86.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 172}}
+{"t": 86.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 173}}
+{"t": 86.68, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 48, "clip_start_s": 86.68, "clip_end_s": 87.46, "speaker": "OTHER", "transcript": "Saw a movie the other day."}}
+{"t": 87.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 174}}
+{"t": 87.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 49, "clip_start_s": 87.46, "clip_end_s": 88.18, "speaker": "OTHER", "transcript": "That was fun."}}
+{"t": 87.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 175}}
+{"t": 88.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 176}}
+{"t": 88.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 50, "clip_start_s": 88.38, "clip_end_s": 90.4, "speaker": "OTHER", "transcript": "Um, definitely recommend"}}
+{"t": 88.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 177}}
+{"t": 89.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 178}}
+{"t": 89.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 179}}
+{"t": 90.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 180}}
+{"t": 90.4, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 50, "transcript": "Um, definitely recommend", "speaker": "OTHER"}}
+{"t": 90.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 51, "clip_start_s": 90.4, "clip_end_s": 90.4, "speaker": "OTHER", "transcript": "."}}
+{"t": 90.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 52, "clip_start_s": 90.4, "clip_end_s": 92.08, "speaker": "OTHER", "transcript": "There's some good movies out right now."}}
+{"t": 90.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 181}}
+{"t": 91.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 182}}
+{"t": 91.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 183}}
+{"t": 92.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 184}}
+{"t": 92.08, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 53, "clip_start_s": 92.08, "clip_end_s": 92.38, "speaker": "OTHER", "transcript": "So"}}
+{"t": 92.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 54, "clip_start_s": 92.38, "clip_end_s": 93.88, "speaker": "OTHER", "transcript": "go and check out some of those movies."}}
+{"t": 92.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 185}}
+{"t": 93.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 186}}
+{"t": 93.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 187}}
+{"t": 93.88, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 55, "clip_start_s": 93.88, "clip_end_s": 99.28, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 94.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 188}}
+{"t": 94.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 189}}
+{"t": 95.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 190}}
+{"t": 95.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 191}}
+{"t": 96.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 192}}
+{"t": 96.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 193}}
+{"t": 97.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 194}}
+{"t": 97.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 195}}
+{"t": 98.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 196}}
+{"t": 98.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 197}}
+{"t": 99.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 198}}
+{"t": 99.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 199}}
+{"t": 100.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 200}}
+{"t": 100.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 201}}
+{"t": 101.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 202}}
+{"t": 101.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 203}}
+{"t": 102.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 204}}
+{"t": 102.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 205}}
+{"t": 103.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 206}}
+{"t": 103.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 207}}
+{"t": 104.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 208}}
+{"t": 104.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 209}}
+{"t": 105.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 210}}
+{"t": 105.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 211}}
+{"t": 106.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 212}}
+{"t": 106.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 213}}
+{"t": 107.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 214}}
+{"t": 107.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 215}}
+{"t": 108.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 216}}
+{"t": 108.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 217}}
+{"t": 109.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 218}}
+{"t": 109.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 219}}
+{"t": 110.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 220}}
+{"t": 110.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 221}}
+{"t": 111.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 222}}
+{"t": 111.213, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 56, "clip_start_s": 111.213, "clip_end_s": 111.88, "speaker": "SELF", "transcript": "Hi."}}
+{"t": 111.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 223}}
+{"t": 112.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 224}}
+{"t": 112.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 225}}
+{"t": 113.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 226}}
+{"t": 113.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 227}}
+{"t": 114.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 228}}
+{"t": 114.34, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 57, "clip_start_s": 114.34, "clip_end_s": 114.7, "speaker": "OTHER", "transcript": "Gotta lose."}}
+{"t": 114.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 229}}
+{"t": 114.7, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 58, "clip_start_s": 114.7, "clip_end_s": 116.92, "speaker": "OTHER", "transcript": "Tomato."}}
+{"t": 115.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 230}}
+{"t": 115.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 231}}
+{"t": 116.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 232}}
+{"t": 116.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 233}}
+{"t": 117.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 234}}
+{"t": 117.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 235}}
+{"t": 118.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 236}}
+{"t": 118.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 237}}
+{"t": 119.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 238}}
+{"t": 119.44, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 59, "clip_start_s": 119.44, "clip_end_s": 119.8, "speaker": "SELF", "transcript": "It's alive."}}
+{"t": 119.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 239}}
+{"t": 120.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 240}}
+{"t": 120.3, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 60, "clip_start_s": 120.3, "clip_end_s": 121.78, "speaker": "SELF", "transcript": "What about you?"}}
+{"t": 120.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 241}}
+{"t": 121.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 242}}
+{"t": 121.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 243}}
+{"t": 121.78, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 60, "transcript": "What about you?", "speaker": "SELF"}}
+{"t": 121.78, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 61, "clip_start_s": 121.78, "clip_end_s": 123.88, "speaker": "SELF", "transcript": "What have you been up to?"}}
+{"t": 122.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 244}}
+{"t": 122.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 245}}
+{"t": 123.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 246}}
+{"t": 123.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 247}}
+{"t": 123.88, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 61, "transcript": "What have you been up to?", "speaker": "SELF"}}
+{"t": 124.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 248}}
+{"t": 124.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 249}}
+{"t": 125.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 250}}
+{"t": 125.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 251}}
+{"t": 126.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 252}}
+{"t": 126.22, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 62, "clip_start_s": 126.22, "clip_end_s": 126.22, "speaker": "OTHER", "transcript": "Um,"}}
+{"t": 126.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 253}}
+{"t": 127.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 254}}
+{"t": 127.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 255}}
+{"t": 128.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 256}}
+{"t": 128.253, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 63, "clip_start_s": 128.253, "clip_end_s": 128.92, "speaker": "SELF", "transcript": "Huh?"}}
+{"t": 128.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 257}}
+{"t": 129.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 258}}
+{"t": 129.25, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 64, "clip_start_s": 129.25, "clip_end_s": 129.94, "speaker": "OTHER", "transcript": "my oldest."}}
+{"t": 129.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 259}}
+{"t": 129.94, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 65, "clip_start_s": 129.94, "clip_end_s": 130.3, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 130.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 260}}
+{"t": 130.3, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 66, "clip_start_s": 130.3, "clip_end_s": 132.4, "speaker": "OTHER", "transcript": "Got the flu or something."}}
+{"t": 130.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 261}}
+{"t": 131.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 262}}
+{"t": 131.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 263}}
+{"t": 132.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 264}}
+{"t": 132.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 67, "clip_start_s": 132.4, "clip_end_s": 138.34, "speaker": "OTHER", "transcript": "Still recuperating."}}
+{"t": 132.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 265}}
+{"t": 133.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 266}}
+{"t": 133.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 267}}
+{"t": 134.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 268}}
+{"t": 134.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 269}}
+{"t": 135.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 270}}
+{"t": 135.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 271}}
+{"t": 136.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 272}}
+{"t": 136.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 273}}
+{"t": 137.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 274}}
+{"t": 137.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 275}}
+{"t": 138.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 276}}
+{"t": 138.34, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 68, "clip_start_s": 138.34, "clip_end_s": 140.38, "speaker": "OTHER", "transcript": "I have a car."}}
+{"t": 138.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 277}}
+{"t": 139.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 278}}
+{"t": 139.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 279}}
+{"t": 140.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 280}}
+{"t": 140.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 69, "clip_start_s": 140.38, "clip_end_s": 141.34, "speaker": "OTHER", "transcript": "Yeah"}}
+{"t": 140.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 281}}
+{"t": 141.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 282}}
+{"t": 141.34, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 70, "clip_start_s": 141.34, "clip_end_s": 141.7, "speaker": "OTHER", "transcript": ", actually."}}
+{"t": 141.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 283}}
+{"t": 142.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 284}}
+{"t": 142.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 285}}
+{"t": 142.56, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 71, "clip_start_s": 142.56, "clip_end_s": 144.1, "speaker": "OTHER", "transcript": "A little bit."}}
+{"t": 143.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 286}}
+{"t": 143.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 287}}
+{"t": 144.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 288}}
+{"t": 144.1, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 72, "clip_start_s": 144.1, "clip_end_s": 144.52, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 144.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 289}}
+{"t": 144.52, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 73, "clip_start_s": 144.52, "clip_end_s": 147.94, "speaker": "OTHER", "transcript": "Luckily she needs to just not throw enough anything."}}
+{"t": 145.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 290}}
+{"t": 145.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 291}}
+{"t": 146.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 292}}
+{"t": 146.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 293}}
+{"t": 147.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 294}}
+{"t": 147.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 295}}
+{"t": 147.94, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 75, "clip_start_s": 147.94, "clip_end_s": 149.5, "speaker": "OTHER", "transcript": "So eh, that's very helpful."}}
+{"t": 148.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 296}}
+{"t": 148.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 297}}
+{"t": 149.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 298}}
+{"t": 149.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 299}}
+{"t": 149.71, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 74, "clip_start_s": 149.71, "clip_end_s": 149.98, "speaker": "SELF", "transcript": "Shrimp."}}
+{"t": 149.98, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 76, "clip_start_s": 149.98, "clip_end_s": 151.66, "speaker": "SELF", "transcript": "Hopefully you don't get sick"}}
+{"t": 150.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 300}}
+{"t": 150.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 301}}
+{"t": 151.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 302}}
+{"t": 151.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 303}}
+{"t": 151.66, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 77, "clip_start_s": 151.66, "clip_end_s": 151.9, "speaker": "SELF", "transcript": "too."}}
+{"t": 152.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 304}}
+{"t": 152.17, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 79, "clip_start_s": 152.17, "clip_end_s": 152.44, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 152.44, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 80, "clip_start_s": 152.44, "clip_end_s": 152.92, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 152.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 305}}
+{"t": 153.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 306}}
+{"t": 153.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 307}}
+{"t": 153.92, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 78, "clip_start_s": 153.92, "clip_end_s": 154.6, "speaker": "SELF", "transcript": "Stay away."}}
+{"t": 154.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 308}}
+{"t": 154.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 309}}
+{"t": 154.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 81, "clip_start_s": 154.96, "clip_end_s": 155.32, "speaker": "OTHER", "transcript": "I"}}
+{"t": 155.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 310}}
+{"t": 155.32, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 82, "clip_start_s": 155.32, "clip_end_s": 156.1, "speaker": "OTHER", "transcript": "have to feel anything."}}
+{"t": 155.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 311}}
+{"t": 156.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 312}}
+{"t": 156.1, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 83, "clip_start_s": 156.1, "clip_end_s": 159.88, "speaker": "OTHER", "transcript": "I was like, i was like, i get sick easily."}}
+{"t": 156.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 313}}
+{"t": 157.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 314}}
+{"t": 157.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 315}}
+{"t": 158.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 316}}
+{"t": 158.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 317}}
+{"t": 159.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 318}}
+{"t": 159.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 319}}
+{"t": 159.88, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 84, "clip_start_s": 159.88, "clip_end_s": 160.24, "speaker": "OTHER", "transcript": "So"}}
+{"t": 160.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 320}}
+{"t": 160.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 86, "clip_start_s": 160.24, "clip_end_s": 160.66, "speaker": "OTHER", "transcript": "i was like,"}}
+{"t": 160.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 321}}
+{"t": 161.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 322}}
+{"t": 161.073, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 85, "clip_start_s": 161.073, "clip_end_s": 161.74, "speaker": "SELF", "transcript": "Oh."}}
+{"t": 161.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 323}}
+{"t": 162.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 324}}
+{"t": 162.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 325}}
+{"t": 163.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 326}}
+{"t": 163.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 327}}
+{"t": 164.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 328}}
+{"t": 164.42, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 87, "clip_start_s": 164.42, "clip_end_s": 164.92, "speaker": "OTHER", "transcript": "i"}}
+{"t": 164.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 329}}
+{"t": 164.92, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 88, "clip_start_s": 164.92, "clip_end_s": 165.58, "speaker": "OTHER", "transcript": "'ve got my shots."}}
+{"t": 165.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 330}}
+{"t": 165.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 331}}
+{"t": 166.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 332}}
+{"t": 166.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 89, "clip_start_s": 166.46, "clip_end_s": 167.26, "speaker": "SELF", "transcript": "Oh yeah."}}
+{"t": 166.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 333}}
+{"t": 167.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 334}}
+{"t": 167.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 335}}
+{"t": 167.92, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 90, "clip_start_s": 167.92, "clip_end_s": 167.98, "speaker": "OTHER", "transcript": "Nope."}}
+{"t": 167.98, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 91, "clip_start_s": 167.98, "clip_end_s": 169.3, "speaker": "OTHER", "transcript": "Just the season."}}
+{"t": 168.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 336}}
+{"t": 168.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 337}}
+{"t": 169.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 338}}
+{"t": 169.3, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 93, "clip_start_s": 169.3, "clip_end_s": 170.8, "speaker": "OTHER", "transcript": "I will get my shots."}}
+{"t": 169.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 339}}
+{"t": 170.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 340}}
+{"t": 170.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 341}}
+{"t": 170.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 92, "clip_start_s": 170.96, "clip_end_s": 171.28, "speaker": "SELF", "transcript": "Same."}}
+{"t": 171.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 342}}
+{"t": 171.28, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 94, "clip_start_s": 171.28, "clip_end_s": 172.06, "speaker": "OTHER", "transcript": "Putting it off."}}
+{"t": 171.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 343}}
+{"t": 172.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 344}}
+{"t": 172.06, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 95, "clip_start_s": 172.06, "clip_end_s": 172.24, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 172.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 96, "clip_start_s": 172.24, "clip_end_s": 175.24, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 172.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 345}}
+{"t": 173.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 346}}
+{"t": 173.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 347}}
+{"t": 174.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 348}}
+{"t": 174.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 349}}
+{"t": 175.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 350}}
+{"t": 175.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 97, "clip_start_s": 175.24, "clip_end_s": 176.38, "speaker": "OTHER", "transcript": "Most of her classmates"}}
+{"t": 175.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 351}}
+{"t": 176.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 352}}
+{"t": 176.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 98, "clip_start_s": 176.38, "clip_end_s": 176.74, "speaker": "OTHER", "transcript": "are sick."}}
+{"t": 176.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 353}}
+{"t": 176.74, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 99, "clip_start_s": 176.74, "clip_end_s": 177.52, "speaker": "OTHER", "transcript": "Mm."}}
+{"t": 177.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 354}}
+{"t": 177.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 355}}
+{"t": 177.7, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 101, "clip_start_s": 177.7, "clip_end_s": 177.88, "speaker": "SELF", "transcript": "Um,"}}
+{"t": 178.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 356}}
+{"t": 178.33, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 100, "clip_start_s": 178.33, "clip_end_s": 180.7, "speaker": "OTHER", "transcript": "Let me start to well, this last week."}}
+{"t": 178.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 357}}
+{"t": 179.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 358}}
+{"t": 179.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 359}}
+{"t": 180.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 360}}
+{"t": 180.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 361}}
+{"t": 180.78, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 102, "clip_start_s": 180.78, "clip_end_s": 182.14, "speaker": "OTHER", "transcript": "Even the teachers"}}
+{"t": 181.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 362}}
+{"t": 181.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 363}}
+{"t": 182.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 364}}
+{"t": 182.14, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 103, "clip_start_s": 182.14, "clip_end_s": 182.14, "speaker": "OTHER", "transcript": "."}}
+{"t": 182.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 365}}
+{"t": 182.84, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 104, "clip_start_s": 182.84, "clip_end_s": 183.34, "speaker": "SELF", "transcript": "oh."}}
+{"t": 183.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 366}}
+{"t": 183.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 367}}
+{"t": 183.73, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 105, "clip_start_s": 183.73, "clip_end_s": 184.96, "speaker": "OTHER", "transcript": "That's what we're saying now."}}
+{"t": 184.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 368}}
+{"t": 184.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 369}}
+{"t": 184.96, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 105, "transcript": "That's what we're saying now.", "speaker": "OTHER"}}
+{"t": 185.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 370}}
+{"t": 185.22, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 106, "clip_start_s": 185.22, "clip_end_s": 186.22, "speaker": "OTHER", "transcript": "Kids"}}
+{"t": 185.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 371}}
+{"t": 186.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 372}}
+{"t": 186.22, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 107, "clip_start_s": 186.22, "clip_end_s": 186.22, "speaker": "OTHER", "transcript": "."}}
+{"t": 186.22, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 108, "clip_start_s": 186.22, "clip_end_s": 191.2, "speaker": "OTHER", "transcript": "Every time i go to visit my sister, i swear."}}
+{"t": 186.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 373}}
+{"t": 187.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 374}}
+{"t": 187.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 375}}
+{"t": 188.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 376}}
+{"t": 188.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 377}}
+{"t": 189.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 378}}
+{"t": 189.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 379}}
+{"t": 190.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 380}}
+{"t": 190.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 381}}
+{"t": 191.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 382}}
+{"t": 191.2, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 109, "clip_start_s": 191.2, "clip_end_s": 191.5, "speaker": "OTHER", "transcript": "I always"}}
+{"t": 191.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 383}}
+{"t": 191.5, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 110, "clip_start_s": 191.5, "clip_end_s": 192.88, "speaker": "OTHER", "transcript": "have to like a week later."}}
+{"t": 192.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 384}}
+{"t": 192.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 385}}
+{"t": 192.88, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 111, "clip_start_s": 192.88, "clip_end_s": 199.72, "speaker": "OTHER", "transcript": "This time of year."}}
+{"t": 193.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 386}}
+{"t": 193.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 387}}
+{"t": 194.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 388}}
+{"t": 194.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 389}}
+{"t": 195.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 390}}
+{"t": 195.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 391}}
+{"t": 196.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 392}}
+{"t": 196.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 393}}
+{"t": 197.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 394}}
+{"t": 197.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 395}}
+{"t": 198.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 396}}
+{"t": 198.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 397}}
+{"t": 199.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 398}}
+{"t": 199.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 399}}
+{"t": 199.72, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 112, "clip_start_s": 199.72, "clip_end_s": 201.4, "speaker": "OTHER", "transcript": "Things are gonna start changing with"}}
+{"t": 200.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 400}}
+{"t": 200.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 401}}
+{"t": 201.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 402}}
+{"t": 201.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 115, "clip_start_s": 201.4, "clip_end_s": 205.66, "speaker": "OTHER", "transcript": "the leaves and the weather's getting a little bit colder."}}
+{"t": 201.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 403}}
+{"t": 202.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 404}}
+{"t": 202.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 405}}
+{"t": 203.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 406}}
+{"t": 203.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 407}}
+{"t": 204.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 408}}
+{"t": 204.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 409}}
+{"t": 205.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 410}}
+{"t": 205.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 411}}
+{"t": 205.9, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 113, "clip_start_s": 205.9, "clip_end_s": 206.38, "speaker": "SELF", "transcript": "Yeah."}}
+{"t": 206.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 412}}
+{"t": 206.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 413}}
+{"t": 207.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 414}}
+{"t": 207.0, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 114, "clip_start_s": 207.0, "clip_end_s": 208.48, "speaker": "SELF", "transcript": "I like it."}}
+{"t": 207.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 415}}
+{"t": 208.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 416}}
+{"t": 208.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 417}}
+{"t": 209.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 418}}
+{"t": 209.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 419}}
+{"t": 210.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 420}}
+{"t": 210.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 421}}
+{"t": 211.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 422}}
+{"t": 211.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 423}}
+{"t": 212.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 424}}
+{"t": 212.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 425}}
+{"t": 213.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 426}}
+{"t": 213.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 427}}
+{"t": 214.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 428}}
+{"t": 214.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 429}}
+{"t": 214.72, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 116, "clip_start_s": 214.72, "clip_end_s": 216.28, "speaker": "OTHER", "transcript": "Yeah, the there was some fog this morning."}}
+{"t": 215.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 430}}
+{"t": 215.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 431}}
+{"t": 216.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 432}}
+{"t": 216.28, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 117, "clip_start_s": 216.28, "clip_end_s": 216.94, "speaker": "SELF", "transcript": "Mm."}}
+{"t": 216.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 433}}
+{"t": 217.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 434}}
+{"t": 217.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 435}}
+{"t": 218.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 436}}
+{"t": 218.18, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 118, "clip_start_s": 218.18, "clip_end_s": 218.68, "speaker": "OTHER", "transcript": "There"}}
+{"t": 218.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 437}}
+{"t": 218.68, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 119, "clip_start_s": 218.68, "clip_end_s": 218.68, "speaker": "OTHER", "transcript": "."}}
+{"t": 218.68, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 120, "clip_start_s": 218.68, "clip_end_s": 219.88, "speaker": "OTHER", "transcript": "I really enjoyed that."}}
+{"t": 219.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 438}}
+{"t": 219.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 439}}
+{"t": 219.88, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 121, "clip_start_s": 219.88, "clip_end_s": 221.92, "speaker": "OTHER", "transcript": "This little crisp outside."}}
+{"t": 220.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 440}}
+{"t": 220.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 441}}
+{"t": 221.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 442}}
+{"t": 221.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 443}}
+{"t": 221.92, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 122, "clip_start_s": 221.92, "clip_end_s": 223.78, "speaker": "OTHER", "transcript": "I was like, this is the first day that"}}
+{"t": 222.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 444}}
+{"t": 222.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 445}}
+{"t": 223.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 446}}
+{"t": 223.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 447}}
+{"t": 223.78, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 124, "clip_start_s": 223.78, "clip_end_s": 225.64, "speaker": "OTHER", "transcript": "it really feels like saul is coming."}}
+{"t": 224.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 448}}
+{"t": 224.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 449}}
+{"t": 225.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 450}}
+{"t": 225.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 451}}
+{"t": 225.9, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 123, "clip_start_s": 225.9, "clip_end_s": 226.42, "speaker": "SELF", "transcript": "Yeah."}}
+{"t": 226.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 452}}
+{"t": 226.42, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 125, "clip_start_s": 226.42, "clip_end_s": 228.7, "speaker": "SELF", "transcript": "I think today is the first day of fall."}}
+{"t": 226.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 453}}
+{"t": 227.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 454}}
+{"t": 227.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 455}}
+{"t": 228.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 456}}
+{"t": 228.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 457}}
+{"t": 228.85, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 126, "clip_start_s": 228.85, "clip_end_s": 229.24, "speaker": "OTHER", "transcript": "Yes, it"}}
+{"t": 229.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 458}}
+{"t": 229.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 127, "clip_start_s": 229.24, "clip_end_s": 229.36, "speaker": "OTHER", "transcript": "is."}}
+{"t": 229.36, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 128, "clip_start_s": 229.36, "clip_end_s": 230.08, "speaker": "OTHER", "transcript": "They're all over"}}
+{"t": 229.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 459}}
+{"t": 230.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 460}}
+{"t": 230.08, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 129, "clip_start_s": 230.08, "clip_end_s": 230.26, "speaker": "OTHER", "transcript": ", right?"}}
+{"t": 230.26, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 130, "clip_start_s": 230.26, "clip_end_s": 230.68, "speaker": "OTHER", "transcript": "Yeah."}}
+{"t": 230.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 461}}
+{"t": 230.68, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 131, "clip_start_s": 230.68, "clip_end_s": 231.4, "speaker": "OTHER", "transcript": "Twenty-second."}}
+{"t": 231.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 462}}
+{"t": 231.4, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 132, "clip_start_s": 231.4, "clip_end_s": 232.78, "speaker": "OTHER", "transcript": "Perfect timing."}}
+{"t": 231.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 463}}
+{"t": 232.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 464}}
+{"t": 232.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 465}}
+{"t": 232.78, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 133, "clip_start_s": 232.78, "clip_end_s": 235.18, "speaker": "OTHER", "transcript": "The sandwich is delicious."}}
+{"t": 233.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 466}}
+{"t": 233.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 467}}
+{"t": 234.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 468}}
+{"t": 234.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 469}}
+{"t": 235.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 470}}
+{"t": 235.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 471}}
+{"t": 235.593, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 134, "clip_start_s": 235.593, "clip_end_s": 236.26, "speaker": "SELF", "transcript": "Yay."}}
+{"t": 236.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 472}}
+{"t": 236.26, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 135, "clip_start_s": 236.26, "clip_end_s": 238.24, "speaker": "SELF", "transcript": "I'm so glad everyone likes it."}}
+{"t": 236.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 473}}
+{"t": 237.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 474}}
+{"t": 237.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 475}}
+{"t": 238.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 476}}
+{"t": 238.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 136, "clip_start_s": 238.24, "clip_end_s": 238.96, "speaker": "SELF", "transcript": "And"}}
+{"t": 238.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 477}}
+{"t": 238.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 137, "clip_start_s": 238.96, "clip_end_s": 242.14, "speaker": "SELF", "transcript": "then after this, game."}}
+{"t": 239.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 478}}
+{"t": 239.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 479}}
+{"t": 240.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 480}}
+{"t": 240.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 481}}
+{"t": 241.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 482}}
+{"t": 241.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 483}}
+{"t": 242.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 484}}
+{"t": 242.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 138, "clip_start_s": 242.46, "clip_end_s": 243.94, "speaker": "SELF", "transcript": "After this"}}
+{"t": 242.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 485}}
+{"t": 243.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 486}}
+{"t": 243.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 487}}
+{"t": 243.94, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 139, "clip_start_s": 243.94, "clip_end_s": 245.14, "speaker": "SELF", "transcript": "i have some games."}}
+{"t": 244.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 488}}
+{"t": 244.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 489}}
+{"t": 245.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 490}}
+{"t": 245.46, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 140, "clip_start_s": 245.46, "clip_end_s": 247.0, "speaker": "SELF", "transcript": "Plan for us."}}
+{"t": 245.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 491}}
+{"t": 246.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 492}}
+{"t": 246.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 493}}
+{"t": 247.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 494}}
+{"t": 247.42, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 141, "clip_start_s": 247.42, "clip_end_s": 247.84, "speaker": "OTHER", "transcript": "Okay?"}}
+{"t": 247.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 495}}
+{"t": 248.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 496}}
+{"t": 248.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 497}}
+{"t": 249.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 498}}
+{"t": 249.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 499}}
+{"t": 250.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 500}}
+{"t": 250.16, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 142, "clip_start_s": 250.16, "clip_end_s": 253.06, "speaker": "SELF", "transcript": "So don't be too hungry."}}
+{"t": 250.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 501}}
+{"t": 250.833, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 143, "clip_start_s": 250.833, "clip_end_s": 251.5, "speaker": "OTHER", "transcript": "Look,"}}
+{"t": 251.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 502}}
+{"t": 251.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 503}}
+{"t": 252.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 504}}
+{"t": 252.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 505}}
+{"t": 253.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 506}}
+{"t": 253.06, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 144, "clip_start_s": 253.06, "clip_end_s": 253.66, "speaker": "SELF", "transcript": "I mean"}}
+{"t": 253.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 507}}
+{"t": 253.66, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 145, "clip_start_s": 253.66, "clip_end_s": 254.08, "speaker": "SELF", "transcript": ", too full."}}
+{"t": 254.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 508}}
+{"t": 254.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 509}}
+{"t": 255.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 510}}
+{"t": 255.2, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 147, "clip_start_s": 255.2, "clip_end_s": 255.7, "speaker": "OTHER", "transcript": "activity?"}}
+{"t": 255.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 511}}
+{"t": 256.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 512}}
+{"t": 256.12, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 146, "clip_start_s": 256.12, "clip_end_s": 256.84, "speaker": "SELF", "transcript": "Oh yeah."}}
+{"t": 256.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 513}}
+{"t": 256.84, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 148, "clip_start_s": 256.84, "clip_end_s": 262.96, "speaker": "SELF", "transcript": "Maybe."}}
+{"t": 257.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 514}}
+{"t": 257.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 515}}
+{"t": 258.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 516}}
+{"t": 258.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 517}}
+{"t": 259.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 518}}
+{"t": 259.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 519}}
+{"t": 260.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 520}}
+{"t": 260.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 521}}
+{"t": 261.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 522}}
+{"t": 261.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 523}}
+{"t": 262.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 524}}
+{"t": 262.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 525}}
+{"t": 262.96, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 149, "clip_start_s": 262.96, "clip_end_s": 267.82, "speaker": "SELF", "transcript": "Mm."}}
+{"t": 263.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 526}}
+{"t": 263.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 527}}
+{"t": 264.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 528}}
+{"t": 264.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 529}}
+{"t": 265.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 530}}
+{"t": 265.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 531}}
+{"t": 266.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 532}}
+{"t": 266.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 533}}
+{"t": 267.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 534}}
+{"t": 267.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 535}}
+{"t": 268.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 536}}
+{"t": 268.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 537}}
+{"t": 269.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 538}}
+{"t": 269.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 539}}
+{"t": 270.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 540}}
+{"t": 270.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 541}}
+{"t": 271.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 542}}
+{"t": 271.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 543}}
+{"t": 272.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 544}}
+{"t": 272.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 545}}
+{"t": 273.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 546}}
+{"t": 273.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 547}}
+{"t": 273.62, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 150, "clip_start_s": 273.62, "clip_end_s": 274.48, "speaker": "OTHER", "transcript": "Good idea."}}
+{"t": 274.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 548}}
+{"t": 274.48, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 151, "clip_start_s": 274.48, "clip_end_s": 277.42, "speaker": "OTHER", "transcript": "Oh"}}
+{"t": 274.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 549}}
+{"t": 275.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 550}}
+{"t": 275.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 551}}
+{"t": 276.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 552}}
+{"t": 276.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 553}}
+{"t": 277.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 554}}
+{"t": 277.42, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 152, "clip_start_s": 277.42, "clip_end_s": 278.08, "speaker": "OTHER", "transcript": "god, we came over."}}
+{"t": 277.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 555}}
+{"t": 278.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 556}}
+{"t": 278.08, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 153, "clip_start_s": 278.08, "clip_end_s": 279.58, "speaker": "OTHER", "transcript": "Now we're able to make it happen."}}
+{"t": 278.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 557}}
+{"t": 279.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 558}}
+{"t": 279.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 559}}
+{"t": 280.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 560}}
+{"t": 280.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 561}}
+{"t": 280.64, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 154, "clip_start_s": 280.64, "clip_end_s": 281.38, "speaker": "SELF", "transcript": "I know."}}
+{"t": 281.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 562}}
+{"t": 281.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 155, "clip_start_s": 281.38, "clip_end_s": 282.16, "speaker": "SELF", "transcript": "I know everyone"}}
+{"t": 281.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 563}}
+{"t": 282.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 564}}
+{"t": 282.16, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 156, "clip_start_s": 282.16, "clip_end_s": 283.0, "speaker": "SELF", "transcript": "'s been so busy."}}
+{"t": 282.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 565}}
+{"t": 283.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 566}}
+{"t": 283.0, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 157, "clip_start_s": 283.0, "clip_end_s": 286.48, "speaker": "SELF", "transcript": "Yeah."}}
+{"t": 283.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 567}}
+{"t": 284.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 568}}
+{"t": 284.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 569}}
+{"t": 285.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 570}}
+{"t": 285.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 571}}
+{"t": 286.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 572}}
+{"t": 286.48, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 158, "clip_start_s": 286.48, "clip_end_s": 288.28, "speaker": "SELF", "transcript": "Kids"}}
+{"t": 286.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 573}}
+{"t": 287.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 574}}
+{"t": 287.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 575}}
+{"t": 288.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 576}}
+{"t": 288.28, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 159, "clip_start_s": 288.28, "clip_end_s": 288.28, "speaker": "SELF", "transcript": "."}}
+{"t": 288.38, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 161, "clip_start_s": 288.38, "clip_end_s": 292.24, "speaker": "OTHER", "transcript": "Kids, how's your cake?"}}
+{"t": 288.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 577}}
+{"t": 289.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 578}}
+{"t": 289.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 160, "clip_start_s": 289.24, "clip_end_s": 289.78, "speaker": "SELF", "transcript": "You got the kids."}}
+{"t": 289.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 579}}
+{"t": 290.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 580}}
+{"t": 290.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 581}}
+{"t": 291.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 582}}
+{"t": 291.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 583}}
+{"t": 292.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 584}}
+{"t": 292.24, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 161, "transcript": "Kids, how's your cake?", "speaker": "OTHER"}}
+{"t": 292.24, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 162, "clip_start_s": 292.24, "clip_end_s": 292.9, "speaker": "OTHER", "transcript": "You got a baby"}}
+{"t": 292.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 585}}
+{"t": 292.9, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 164, "clip_start_s": 292.9, "clip_end_s": 293.44, "speaker": "OTHER", "transcript": "coming up."}}
+{"t": 293.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 586}}
+{"t": 293.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 587}}
+{"t": 293.65, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 163, "clip_start_s": 293.65, "clip_end_s": 294.34, "speaker": "SELF", "transcript": "Oh my god."}}
+{"t": 294.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 588}}
+{"t": 294.34, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 165, "clip_start_s": 294.34, "clip_end_s": 297.64, "speaker": "SELF", "transcript": "He is a menace."}}
+{"t": 294.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 589}}
+{"t": 295.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 590}}
+{"t": 295.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 591}}
+{"t": 296.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 592}}
+{"t": 296.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 593}}
+{"t": 297.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 594}}
+{"t": 297.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 595}}
+{"t": 297.64, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 166, "clip_start_s": 297.64, "clip_end_s": 302.8, "speaker": "SELF", "transcript": "I don't even wanna talk about it."}}
+{"t": 298.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 596}}
+{"t": 298.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 597}}
+{"t": 299.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 598}}
+{"t": 299.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 599}}
+{"t": 300.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 600}}
+{"t": 300.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 601}}
+{"t": 301.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 602}}
+{"t": 301.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 603}}
+{"t": 302.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 604}}
+{"t": 302.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 605}}
+{"t": 303.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 606}}
+{"t": 303.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 607}}
+{"t": 304.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 608}}
+{"t": 304.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 609}}
+{"t": 305.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 610}}
+{"t": 305.44, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 167, "clip_start_s": 305.44, "clip_end_s": 306.94, "speaker": "OTHER", "transcript": "I'm just making a mess all over the place."}}
+{"t": 305.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 611}}
+{"t": 306.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 612}}
+{"t": 306.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 613}}
+{"t": 306.94, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 168, "clip_start_s": 306.94, "clip_end_s": 307.24, "speaker": "OTHER", "transcript": "Mhm."}}
+{"t": 307.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 614}}
+{"t": 307.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 615}}
+{"t": 307.72, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 169, "clip_start_s": 307.72, "clip_end_s": 307.72, "speaker": "SELF", "transcript": "No."}}
+{"t": 307.8, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 170, "clip_start_s": 307.8, "clip_end_s": 309.58, "speaker": "SELF", "transcript": "I don't know how."}}
+{"t": 308.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 616}}
+{"t": 308.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 617}}
+{"t": 309.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 618}}
+{"t": 309.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 619}}
+{"t": 309.58, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 171, "clip_start_s": 309.58, "clip_end_s": 313.06, "speaker": "SELF", "transcript": "He managed to throw the scrabble pieces on the floor."}}
+{"t": 310.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 620}}
+{"t": 310.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 621}}
+{"t": 311.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 622}}
+{"t": 311.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 623}}
+{"t": 312.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 624}}
+{"t": 312.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 625}}
+{"t": 313.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 626}}
+{"t": 313.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 627}}
+{"t": 314.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 628}}
+{"t": 314.32, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 172, "clip_start_s": 314.32, "clip_end_s": 315.4, "speaker": "OTHER", "transcript": "But i would say that you know."}}
+{"t": 314.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 629}}
+{"t": 315.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 630}}
+{"t": 315.453, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 173, "clip_start_s": 315.453, "clip_end_s": 316.12, "speaker": "SELF", "transcript": "Andrew."}}
+{"t": 315.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 631}}
+{"t": 316.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 632}}
+{"t": 316.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 633}}
+{"t": 316.57, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 174, "clip_start_s": 316.57, "clip_end_s": 317.38, "speaker": "OTHER", "transcript": "That is true."}}
+{"t": 317.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 634}}
+{"t": 317.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 635}}
+{"t": 318.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 636}}
+{"t": 318.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 637}}
+{"t": 319.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 638}}
+{"t": 319.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 639}}
+{"t": 320.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 640}}
+{"t": 320.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 641}}
+{"t": 321.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 642}}
+{"t": 321.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 643}}
+{"t": 322.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 644}}
+{"t": 322.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 645}}
+{"t": 323.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 646}}
+{"t": 323.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 647}}

@@ -1,0 +1,36 @@
+{
+  "model_id": "google/gemma-4-E2B-it",
+  "device": "cuda:1",
+  "rows": [
+    {
+      "prompt_tokens": 32,
+      "decode_tokens": 50,
+      "prefill_ms": 43.18857192993164,
+      "decode_ms": 1785.489797592163,
+      "decode_tok_per_s": 27.443450007991842,
+      "peak_vram_mb": 10267.876864,
+      "avg_power_w": 115.7125,
+      "energy_J": 211.6009458333254
+    },
+    {
+      "prompt_tokens": 125,
+      "decode_tokens": 50,
+      "prefill_ms": 65.7796859741211,
+      "decode_ms": 1809.6904754638672,
+      "decode_tok_per_s": 27.076453495418946,
+      "peak_vram_mb": 10367.395328,
+      "avg_power_w": 125.6,
+      "energy_J": 235.5590522766113
+    },
+    {
+      "prompt_tokens": 503,
+      "decode_tokens": 50,
+      "prefill_ms": 43.19024085998535,
+      "decode_ms": 1923.91037940979,
+      "decode_tok_per_s": 25.468961820888993,
+      "peak_vram_mb": 10772.977664,
+      "avg_power_w": 128.0775,
+      "energy_J": 251.94132969260212
+    }
+  ]
+}

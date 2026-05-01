@@ -1,0 +1,59 @@
+# Large model artifacts and binary blobs (rebuild from source scripts)
+*.pte
+*.dlc
+*.bin
+*.so
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+*.safetensors
+*.raw
+*.etdp
+
+# Phone-side outputs
+outputs/
+outputs_*/
+
+# Caches
+__pycache__/
+*.pyc
+
+# Datasets (must be re-downloaded by users with proper access)
+aria_data/
+
+# Build/run artifacts
+*.log
+emulator_outputs/
+
+# Output dirs from QNN export experiments (regenerable)
+dlv3_qnn_op15/
+qnn_*_op12/
+qnn_*_op15/
+
+# Whisper QNN artifacts (regenerable from onnx_export_whisper.py)
+whisper_qnn_op15/whisper_*.pte
+whisper_qnn_op15/whisper_enc.onnx*
+whisper_qnn_op15/whisper_*.raw
+
+# StreamVGGT output dirs (regenerable from export scripts)
+streamvggt/streamvggt_agg_*.pte
+streamvggt/in_*.raw
+streamvggt/input_*.raw
+
+# Tokenizer/processor caches that get pulled at runtime
+streamvggt/added_tokens.json
+streamvggt/special_tokens_map.json
+streamvggt/tokenizer.json
+streamvggt/tokenizer_config.json
+streamvggt/vocab.json
+streamvggt/merges.txt
+whisper_qnn_op15/added_tokens.json
+whisper_qnn_op15/special_tokens_map.json
+whisper_qnn_op15/tokenizer.json
+whisper_qnn_op15/tokenizer_config.json
+whisper_qnn_op15/vocab.json
+whisper_qnn_op15/merges.txt
+whisper_qnn_op15/normalizer.json
+whisper_qnn_op15/preprocessor_config.json
+whisper_qnn_op15/generation_config.json

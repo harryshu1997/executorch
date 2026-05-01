@@ -1,0 +1,9 @@
+{"t": 0.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 0}}
+{"t": 0.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 1}}
+{"t": 0.642, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 0, "clip_start_s": 0.642, "clip_end_s": 3.294}}
+{"t": 1.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 2}}
+{"t": 1.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 3}}
+{"t": 2.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 4}}
+{"t": 2.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 5}}
+{"t": 3.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 6}}
+{"t": 3.294, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 0, "transcript": null}}

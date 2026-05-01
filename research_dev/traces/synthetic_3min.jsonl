@@ -1,0 +1,412 @@
+{"t": 0.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 0}}
+{"t": 0.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 1}}
+{"t": 1.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 2}}
+{"t": 1.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 3}}
+{"t": 2.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 4}}
+{"t": 2.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 5}}
+{"t": 2.626, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 0, "clip_start_s": 2.626, "clip_end_s": 5.31}}
+{"t": 3.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 6}}
+{"t": 3.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 7}}
+{"t": 4.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 8}}
+{"t": 4.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 9}}
+{"t": 5.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 10}}
+{"t": 5.31, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 0, "transcript": null}}
+{"t": 5.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 11}}
+{"t": 6.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 12}}
+{"t": 6.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 13}}
+{"t": 7.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 14}}
+{"t": 7.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 15}}
+{"t": 8.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 16}}
+{"t": 8.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 17}}
+{"t": 9.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 18}}
+{"t": 9.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 19}}
+{"t": 10.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 20}}
+{"t": 10.05, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 1, "clip_start_s": 10.05, "clip_end_s": 12.702}}
+{"t": 10.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 21}}
+{"t": 11.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 22}}
+{"t": 11.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 23}}
+{"t": 12.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 24}}
+{"t": 12.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 25}}
+{"t": 12.702, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 1, "transcript": null}}
+{"t": 13.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 26}}
+{"t": 13.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 27}}
+{"t": 14.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 28}}
+{"t": 14.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 29}}
+{"t": 15.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 30}}
+{"t": 15.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 31}}
+{"t": 16.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 32}}
+{"t": 16.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 33}}
+{"t": 17.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 34}}
+{"t": 17.41, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 2, "clip_start_s": 17.41, "clip_end_s": 20.094}}
+{"t": 17.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 35}}
+{"t": 18.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 36}}
+{"t": 18.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 37}}
+{"t": 19.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 38}}
+{"t": 19.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 39}}
+{"t": 20.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 40}}
+{"t": 20.094, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 2, "transcript": null}}
+{"t": 20.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 41}}
+{"t": 21.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 42}}
+{"t": 21.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 43}}
+{"t": 21.826, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 3, "clip_start_s": 21.826, "clip_end_s": 24.51}}
+{"t": 22.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 44}}
+{"t": 22.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 45}}
+{"t": 23.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 46}}
+{"t": 23.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 47}}
+{"t": 24.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 48}}
+{"t": 24.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 49}}
+{"t": 24.51, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 3, "transcript": null}}
+{"t": 25.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 50}}
+{"t": 25.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 51}}
+{"t": 26.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 52}}
+{"t": 26.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 53}}
+{"t": 27.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 54}}
+{"t": 27.234, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 4, "clip_start_s": 27.234, "clip_end_s": 29.918}}
+{"t": 27.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 55}}
+{"t": 28.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 56}}
+{"t": 28.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 57}}
+{"t": 29.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 58}}
+{"t": 29.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 59}}
+{"t": 29.918, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 4, "transcript": null}}
+{"t": 30.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 60}}
+{"t": 30.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 61}}
+{"t": 31.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 62}}
+{"t": 31.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 63}}
+{"t": 32.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 64}}
+{"t": 32.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 65}}
+{"t": 33.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 66}}
+{"t": 33.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 67}}
+{"t": 34.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 68}}
+{"t": 34.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 69}}
+{"t": 35.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 70}}
+{"t": 35.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 71}}
+{"t": 36.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 72}}
+{"t": 36.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 73}}
+{"t": 36.61, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 5, "clip_start_s": 36.61, "clip_end_s": 39.294}}
+{"t": 37.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 74}}
+{"t": 37.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 75}}
+{"t": 38.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 76}}
+{"t": 38.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 77}}
+{"t": 39.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 78}}
+{"t": 39.294, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 5, "transcript": null}}
+{"t": 39.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 79}}
+{"t": 40.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 80}}
+{"t": 40.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 81}}
+{"t": 41.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 82}}
+{"t": 41.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 83}}
+{"t": 42.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 84}}
+{"t": 42.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 85}}
+{"t": 43.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 86}}
+{"t": 43.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 87}}
+{"t": 44.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 88}}
+{"t": 44.034, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 6, "clip_start_s": 44.034, "clip_end_s": 46.718}}
+{"t": 44.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 89}}
+{"t": 45.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 90}}
+{"t": 45.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 91}}
+{"t": 46.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 92}}
+{"t": 46.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 93}}
+{"t": 46.718, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 6, "transcript": null}}
+{"t": 47.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 94}}
+{"t": 47.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 95}}
+{"t": 48.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 96}}
+{"t": 48.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 97}}
+{"t": 49.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 98}}
+{"t": 49.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 99}}
+{"t": 50.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 100}}
+{"t": 50.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 101}}
+{"t": 51.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 102}}
+{"t": 51.426, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 7, "clip_start_s": 51.426, "clip_end_s": 54.11}}
+{"t": 51.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 103}}
+{"t": 52.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 104}}
+{"t": 52.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 105}}
+{"t": 53.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 106}}
+{"t": 53.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 107}}
+{"t": 54.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 108}}
+{"t": 54.11, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 7, "transcript": null}}
+{"t": 54.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 109}}
+{"t": 55.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 110}}
+{"t": 55.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 111}}
+{"t": 56.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 112}}
+{"t": 56.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 113}}
+{"t": 56.834, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 8, "clip_start_s": 56.834, "clip_end_s": 59.518}}
+{"t": 57.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 114}}
+{"t": 57.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 115}}
+{"t": 58.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 116}}
+{"t": 58.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 117}}
+{"t": 59.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 118}}
+{"t": 59.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 119}}
+{"t": 59.518, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 8, "transcript": null}}
+{"t": 60.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 120}}
+{"t": 60.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 121}}
+{"t": 61.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 122}}
+{"t": 61.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 123}}
+{"t": 62.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 124}}
+{"t": 62.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 125}}
+{"t": 63.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 126}}
+{"t": 63.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 127}}
+{"t": 64.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 128}}
+{"t": 64.226, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 9, "clip_start_s": 64.226, "clip_end_s": 66.91}}
+{"t": 64.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 129}}
+{"t": 65.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 130}}
+{"t": 65.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 131}}
+{"t": 66.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 132}}
+{"t": 66.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 133}}
+{"t": 66.91, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 9, "transcript": null}}
+{"t": 67.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 134}}
+{"t": 67.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 135}}
+{"t": 68.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 136}}
+{"t": 68.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 137}}
+{"t": 69.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 138}}
+{"t": 69.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 139}}
+{"t": 69.634, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 10, "clip_start_s": 69.634, "clip_end_s": 72.318}}
+{"t": 70.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 140}}
+{"t": 70.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 141}}
+{"t": 71.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 142}}
+{"t": 71.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 143}}
+{"t": 72.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 144}}
+{"t": 72.318, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 10, "transcript": null}}
+{"t": 72.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 145}}
+{"t": 73.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 146}}
+{"t": 73.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 147}}
+{"t": 74.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 148}}
+{"t": 74.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 149}}
+{"t": 75.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 150}}
+{"t": 75.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 151}}
+{"t": 76.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 152}}
+{"t": 76.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 153}}
+{"t": 77.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 154}}
+{"t": 77.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 155}}
+{"t": 78.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 156}}
+{"t": 78.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 157}}
+{"t": 79.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 158}}
+{"t": 79.042, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 11, "clip_start_s": 79.042, "clip_end_s": 81.726}}
+{"t": 79.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 159}}
+{"t": 80.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 160}}
+{"t": 80.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 161}}
+{"t": 81.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 162}}
+{"t": 81.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 163}}
+{"t": 81.726, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 11, "transcript": null}}
+{"t": 82.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 164}}
+{"t": 82.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 165}}
+{"t": 83.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 166}}
+{"t": 83.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 167}}
+{"t": 83.938, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 12, "clip_start_s": 83.938, "clip_end_s": 86.59}}
+{"t": 84.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 168}}
+{"t": 84.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 169}}
+{"t": 85.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 170}}
+{"t": 85.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 171}}
+{"t": 86.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 172}}
+{"t": 86.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 173}}
+{"t": 86.59, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 12, "transcript": null}}
+{"t": 87.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 174}}
+{"t": 87.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 175}}
+{"t": 88.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 176}}
+{"t": 88.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 177}}
+{"t": 89.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 178}}
+{"t": 89.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 179}}
+{"t": 90.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 180}}
+{"t": 90.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 181}}
+{"t": 91.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 182}}
+{"t": 91.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 183}}
+{"t": 92.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 184}}
+{"t": 92.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 185}}
+{"t": 93.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 186}}
+{"t": 93.346, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 13, "clip_start_s": 93.346, "clip_end_s": 95.998}}
+{"t": 93.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 187}}
+{"t": 94.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 188}}
+{"t": 94.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 189}}
+{"t": 95.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 190}}
+{"t": 95.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 191}}
+{"t": 95.998, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 13, "transcript": null}}
+{"t": 96.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 192}}
+{"t": 96.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 193}}
+{"t": 97.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 194}}
+{"t": 97.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 195}}
+{"t": 98.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 196}}
+{"t": 98.21, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 14, "clip_start_s": 98.21, "clip_end_s": 100.894}}
+{"t": 98.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 197}}
+{"t": 99.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 198}}
+{"t": 99.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 199}}
+{"t": 100.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 200}}
+{"t": 100.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 201}}
+{"t": 100.894, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 14, "transcript": null}}
+{"t": 101.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 202}}
+{"t": 101.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 203}}
+{"t": 102.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 204}}
+{"t": 102.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 205}}
+{"t": 103.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 206}}
+{"t": 103.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 207}}
+{"t": 103.618, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 15, "clip_start_s": 103.618, "clip_end_s": 106.302}}
+{"t": 104.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 208}}
+{"t": 104.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 209}}
+{"t": 105.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 210}}
+{"t": 105.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 211}}
+{"t": 106.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 212}}
+{"t": 106.302, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 15, "transcript": null}}
+{"t": 106.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 213}}
+{"t": 107.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 214}}
+{"t": 107.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 215}}
+{"t": 108.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 216}}
+{"t": 108.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 217}}
+{"t": 108.514, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 16, "clip_start_s": 108.514, "clip_end_s": 111.198}}
+{"t": 109.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 218}}
+{"t": 109.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 219}}
+{"t": 110.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 220}}
+{"t": 110.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 221}}
+{"t": 111.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 222}}
+{"t": 111.198, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 16, "transcript": null}}
+{"t": 111.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 223}}
+{"t": 112.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 224}}
+{"t": 112.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 225}}
+{"t": 112.93, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 17, "clip_start_s": 112.93, "clip_end_s": 115.614}}
+{"t": 113.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 226}}
+{"t": 113.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 227}}
+{"t": 114.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 228}}
+{"t": 114.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 229}}
+{"t": 115.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 230}}
+{"t": 115.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 231}}
+{"t": 115.614, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 17, "transcript": null}}
+{"t": 116.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 232}}
+{"t": 116.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 233}}
+{"t": 117.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 234}}
+{"t": 117.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 235}}
+{"t": 118.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 236}}
+{"t": 118.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 237}}
+{"t": 119.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 238}}
+{"t": 119.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 239}}
+{"t": 120.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 240}}
+{"t": 120.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 241}}
+{"t": 121.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 242}}
+{"t": 121.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 243}}
+{"t": 122.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 244}}
+{"t": 122.338, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 18, "clip_start_s": 122.338, "clip_end_s": 125.022}}
+{"t": 122.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 245}}
+{"t": 123.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 246}}
+{"t": 123.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 247}}
+{"t": 124.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 248}}
+{"t": 124.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 249}}
+{"t": 125.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 250}}
+{"t": 125.022, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 18, "transcript": null}}
+{"t": 125.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 251}}
+{"t": 126.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 252}}
+{"t": 126.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 253}}
+{"t": 127.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 254}}
+{"t": 127.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 255}}
+{"t": 127.714, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 19, "clip_start_s": 127.714, "clip_end_s": 130.398}}
+{"t": 128.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 256}}
+{"t": 128.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 257}}
+{"t": 129.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 258}}
+{"t": 129.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 259}}
+{"t": 130.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 260}}
+{"t": 130.398, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 19, "transcript": null}}
+{"t": 130.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 261}}
+{"t": 131.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 262}}
+{"t": 131.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 263}}
+{"t": 132.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 264}}
+{"t": 132.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 265}}
+{"t": 133.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 266}}
+{"t": 133.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 267}}
+{"t": 134.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 268}}
+{"t": 134.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 269}}
+{"t": 135.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 270}}
+{"t": 135.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 271}}
+{"t": 136.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 272}}
+{"t": 136.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 273}}
+{"t": 137.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 274}}
+{"t": 137.122, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 20, "clip_start_s": 137.122, "clip_end_s": 139.806}}
+{"t": 137.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 275}}
+{"t": 138.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 276}}
+{"t": 138.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 277}}
+{"t": 139.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 278}}
+{"t": 139.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 279}}
+{"t": 139.806, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 20, "transcript": null}}
+{"t": 140.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 280}}
+{"t": 140.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 281}}
+{"t": 141.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 282}}
+{"t": 141.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 283}}
+{"t": 142.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 284}}
+{"t": 142.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 285}}
+{"t": 143.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 286}}
+{"t": 143.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 287}}
+{"t": 144.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 288}}
+{"t": 144.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 289}}
+{"t": 145.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 290}}
+{"t": 145.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 291}}
+{"t": 146.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 292}}
+{"t": 146.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 293}}
+{"t": 147.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 294}}
+{"t": 147.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 295}}
+{"t": 148.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 296}}
+{"t": 148.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 297}}
+{"t": 148.546, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 21, "clip_start_s": 148.546, "clip_end_s": 151.198}}
+{"t": 149.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 298}}
+{"t": 149.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 299}}
+{"t": 150.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 300}}
+{"t": 150.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 301}}
+{"t": 151.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 302}}
+{"t": 151.198, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 21, "transcript": null}}
+{"t": 151.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 303}}
+{"t": 152.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 304}}
+{"t": 152.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 305}}
+{"t": 153.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 306}}
+{"t": 153.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 307}}
+{"t": 154.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 308}}
+{"t": 154.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 309}}
+{"t": 155.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 310}}
+{"t": 155.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 311}}
+{"t": 156.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 312}}
+{"t": 156.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 313}}
+{"t": 157.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 314}}
+{"t": 157.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 315}}
+{"t": 157.922, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 22, "clip_start_s": 157.922, "clip_end_s": 160.606}}
+{"t": 158.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 316}}
+{"t": 158.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 317}}
+{"t": 159.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 318}}
+{"t": 159.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 319}}
+{"t": 160.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 320}}
+{"t": 160.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 321}}
+{"t": 160.606, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 22, "transcript": null}}
+{"t": 161.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 322}}
+{"t": 161.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 323}}
+{"t": 162.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 324}}
+{"t": 162.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 325}}
+{"t": 162.818, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 23, "clip_start_s": 162.818, "clip_end_s": 165.502}}
+{"t": 163.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 326}}
+{"t": 163.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 327}}
+{"t": 164.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 328}}
+{"t": 164.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 329}}
+{"t": 165.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 330}}
+{"t": 165.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 331}}
+{"t": 165.502, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 23, "transcript": null}}
+{"t": 166.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 332}}
+{"t": 166.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 333}}
+{"t": 167.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 334}}
+{"t": 167.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 335}}
+{"t": 168.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 336}}
+{"t": 168.226, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 24, "clip_start_s": 168.226, "clip_end_s": 170.91}}
+{"t": 168.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 337}}
+{"t": 169.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 338}}
+{"t": 169.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 339}}
+{"t": 170.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 340}}
+{"t": 170.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 341}}
+{"t": 170.91, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 24, "transcript": null}}
+{"t": 171.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 342}}
+{"t": 171.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 343}}
+{"t": 172.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 344}}
+{"t": 172.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 345}}
+{"t": 172.61, "task": "Whisper", "deadline_s": 0.5, "priority": "foreground", "payload": {"utt_idx": 25, "clip_start_s": 172.61, "clip_end_s": 175.294}}
+{"t": 173.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 346}}
+{"t": 173.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 347}}
+{"t": 174.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 348}}
+{"t": 174.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 349}}
+{"t": 175.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 350}}
+{"t": 175.294, "task": "LLM_query", "deadline_s": 2.0, "priority": "foreground", "payload": {"utt_idx": 25, "transcript": null}}
+{"t": 175.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 351}}
+{"t": 176.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 352}}
+{"t": 176.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 353}}
+{"t": 177.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 354}}
+{"t": 177.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 355}}
+{"t": 178.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 356}}
+{"t": 178.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 357}}
+{"t": 179.0, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 358}}
+{"t": 179.5, "task": "VGGT_encoder", "deadline_s": 0.45, "priority": "background", "payload": {"frame_idx": 359}}
