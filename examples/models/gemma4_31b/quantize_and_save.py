@@ -6,9 +6,9 @@
 
 """Quantize Gemma 4 31B-IT and save as a quantized checkpoint.
 
-Produces a packing-agnostic safetensors file (int values + per-group scales +
-JSON header) that can later be loaded and packed for any backend via
-``quant.load()`` and ``quant.pack_model()``.
+Produces a safetensors file containing torchao tensor subclasses
+(``Int4Tensor``, ``IntxUnpackedToInt8Tensor``) that can be loaded and
+packed for any backend via ``load_and_pack_for_cuda`` or ``pack_model``.
 
 No CUDA is needed — quantization runs on CPU. CUDA is only required at
 load-and-pack time.
@@ -32,7 +32,6 @@ from executorch.examples.models.gemma4_31b.quant import (
     quantize_model,
     QuantRecipe,
     QuantRule,
-    save,
 )
 
 # ---------------------------------------------------------------------------
@@ -116,12 +115,19 @@ def main() -> None:
         model.lm_head.weight = nn.Parameter(model.embed_tokens.weight.clone())
 
     print(f"Quantizing with recipe '{args.quant_recipe}'...")
-    quantized, unquantized = quantize_model(model, recipe)
+    state_dict = quantize_model(model, recipe)
 
     os.makedirs(args.output, exist_ok=True)
     safetensors_path = os.path.join(args.output, "model.safetensors")
     print("Saving quantized checkpoint...")
-    n_tensors = save(quantized, unquantized, safetensors_path)
+    from safetensors.torch import save_file
+    from torchao.prototype.safetensors.safetensors_support import (
+        flatten_tensor_state_dict,
+    )
+
+    tensors_data, metadata = flatten_tensor_state_dict(state_dict)
+    save_file(tensors_data, safetensors_path, metadata=metadata)
+    n_tensors = len(state_dict)
 
     for filename in ("config.json", "tokenizer.json", "tokenizer_config.json"):
         src = os.path.join(args.model_dir, filename)

@@ -4,32 +4,20 @@
 # This source code is licensed under the BSD-style license found in the
 # LICENSE file in the root directory of this source tree.
 
-"""Quantize weights to canonical form.
+"""Quantize weights to torchao tensor subclasses.
 
 ``quantize_weight`` quantizes a single tensor given a ``QuantConfig``,
-dispatching to the appropriate algorithm based on ``config.method``:
-
-  - ``"min_max"``: standard symmetric/asymmetric quantization via torchao's
-    ``choose_qparams_affine`` + ``quantize_affine``. Runs on CPU or CUDA.
-  - ``"hqq"``: Half-Quadratic Quantization — iteratively refines scales via
-    a proximal solver for better accuracy. ``symmetric=False`` optimizes both
-    scale and zero (requires CUDA). ``symmetric=True`` optimizes scale only
-    (CPU or CUDA).
+returning an ``Int4Tensor`` (4-bit) or ``IntxUnpackedToInt8Tensor`` (8-bit).
 
 ``quantize_model`` walks a model's parameters, applies a ``QuantRecipe``,
-and returns two dicts: quantized weights as ``CanonicalQuantizedWeight``
-and unquantized weights as plain tensors.
-
-Both are model-agnostic — they work for any ``nn.Module`` and any weight
-shape (2D linears, 3D fused-expert stacks, etc.).
+and returns a single state dict containing both quantized subclass tensors
+and unquantized plain tensors.
 """
 
 import torch
 import torch.nn as nn
 
 from .recipe import QuantConfig, QuantRecipe
-
-from .serialize import CanonicalQuantizedWeight
 
 
 # ---------------------------------------------------------------------------
@@ -40,19 +28,14 @@ def _quantize_min_max(
     weight: torch.Tensor,
     config: QuantConfig,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """Standard min/max quantization. Returns (int_data, scale, zero_point)."""
+    """Standard min/max 4-bit quantization. Returns (int_data, scale, zero_point)."""
     from torchao.quantization.quant_primitives import (
         choose_qparams_affine,
         MappingType,
         quantize_affine,
     )
 
-    if config.bits == 4:
-        qmin, qmax = (-8, 7) if config.symmetric else (0, 15)
-    elif config.bits == 8:
-        qmin, qmax = -128, 127
-    else:
-        raise ValueError(f"Unsupported bits={config.bits}")
+    qmin, qmax = (-8, 7) if config.symmetric else (0, 15)
 
     mapping = MappingType.SYMMETRIC if config.symmetric else MappingType.ASYMMETRIC
     block_size = tuple([1] * (weight.ndim - 1) + [config.group_size])
@@ -83,10 +66,7 @@ def _quantize_hqq_asymmetric(
     weight: torch.Tensor,
     config: QuantConfig,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """Full HQQ (asymmetric, optimizes scale + zero). Requires CUDA.
-
-    Returns (int_data, scale, zero_point) in canonical layout.
-    """
+    """Full HQQ (asymmetric, optimizes scale + zero). Requires CUDA."""
     from torchao.quantization.quant_primitives import (
         _choose_qparams_and_quantize_affine_hqq,
     )
@@ -116,22 +96,13 @@ def _quantize_hqq_symmetric(
     weight: torch.Tensor,
     config: QuantConfig,
 ) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """Scale-only HQQ (symmetric, optimizes scale only). Runs on CPU or CUDA.
-
-    Returns (int_data, scale, zero_point) where zero_point is all zeros.
-    """
+    """Scale-only HQQ (symmetric 4-bit, optimizes scale only). Runs on CPU or CUDA."""
     from torchao.quantization.quant_primitives import (
         _choose_qparams_and_quantize_scale_only_hqq,
     )
 
-    if config.bits == 4:
-        qmin, qmax = -8, 7
-    elif config.bits == 8:
-        qmin, qmax = -128, 127
-    else:
-        raise ValueError(f"Unsupported bits={config.bits}")
+    qmin, qmax = -8, 7
 
-    # scale_only_hqq requires 2D. For 3D+, flatten → quantize → reshape.
     orig_shape = weight.shape
     weight_2d = weight.reshape(-1, weight.shape[-1]) if weight.ndim > 2 else weight
 
@@ -149,16 +120,75 @@ def _quantize_hqq_symmetric(
     return int_data, scale, zero_point
 
 
-def quantize_weight(
+def _to_int4_tensor(
+    int_data: torch.Tensor,
+    scale: torch.Tensor,
+    zero_point: torch.Tensor,
+    config: QuantConfig,
+) -> torch.Tensor:
+    """Wrap quantized 4-bit data into an Int4Tensor."""
+    from torchao.quantization.quantize_.workflows.int4.int4_tensor import Int4Tensor
+
+    # Normalize 4-bit signed [-8, 7] to unsigned [0, 15] for storage.
+    if config.symmetric:
+        int_data = int_data + 8
+        zero_point = torch.full_like(scale, 8.0)
+
+    # Int4Tensor stores qdata as nibble-packed uint8 (N, K//2)
+    q = int_data.to(torch.uint8)
+    packed = q[..., ::2] | (q[..., 1::2] << 4)
+
+    # Int4Tensor stores scale/zero as (K//gs, N) — transposed from our (N, K//gs)
+    return Int4Tensor(
+        qdata=packed,
+        scale=scale.t().contiguous(),
+        zero_point=zero_point.t().contiguous(),
+        block_size=[1, config.group_size],
+        shape=torch.Size(int_data.shape),
+    )
+
+
+def _to_intx_tensor(
     weight: torch.Tensor,
     config: QuantConfig,
-) -> CanonicalQuantizedWeight:
-    """Quantize ``weight`` to canonical form.
+) -> torch.Tensor:
+    """Quantize 8-bit via IntxUnpackedToInt8Tensor.from_hp."""
+    from torchao.quantization import IntxUnpackedToInt8Tensor
+    from torchao.quantization.quant_primitives import MappingType
+    from torchao.quantization.quantize_.workflows.intx.intx_choose_qparams_algorithm import (
+        IntxChooseQParamsAlgorithm,
+    )
 
-    Dispatches to the algorithm specified by ``config.method``. The input is
-    processed in float32 internally for numerical stability. Does NOT pad or
-    pack for any backend.
+    mapping = MappingType.SYMMETRIC if config.symmetric else MappingType.ASYMMETRIC
+    if config.method == "hqq":
+        if not config.symmetric:
+            raise ValueError(
+                "8-bit HQQ only supports symmetric quantization "
+                "(HQQ_SCALE_ONLY). Use method='min_max' for asymmetric 8-bit."
+            )
+        algorithm = IntxChooseQParamsAlgorithm.HQQ_SCALE_ONLY
+    else:
+        algorithm = IntxChooseQParamsAlgorithm.AFFINE
+    return IntxUnpackedToInt8Tensor.from_hp(
+        weight,
+        block_size=(1, config.group_size),
+        target_dtype=torch.int8,
+        mapping_type=mapping,
+        intx_choose_qparams_algorithm=algorithm,
+    )
+
+
+def quantize_weight(weight: torch.Tensor, config: QuantConfig) -> torch.Tensor:
+    """Quantize ``weight`` to a torchao tensor subclass.
+
+    Returns ``Int4Tensor`` for 4-bit or ``IntxUnpackedToInt8Tensor`` for 8-bit.
     """
+    if config.bits == 8:
+        return _to_intx_tensor(weight, config)
+
+    if config.bits != 4:
+        raise ValueError(f"Unsupported bits={config.bits}")
+
     if config.method == "min_max":
         int_data, scale, zero_point = _quantize_min_max(weight, config)
     elif config.method == "hqq":
@@ -172,41 +202,36 @@ def quantize_weight(
             f"Supported: 'min_max', 'hqq'."
         )
 
-    # Normalize 4-bit to unsigned [0, 15] for uniform storage and nibble
-    # packing. Symmetric min_max produces [-8, 7]; shift to [0, 15].
-    # HQQ already produces [0, 15] (asymmetric internally).
-    if config.bits == 4 and config.symmetric:
-        int_data = int_data + 8
-
-    return CanonicalQuantizedWeight(
-        qdata=int_data.to(torch.int8),
-        scale=scale.to(torch.bfloat16),
-        zero=zero_point.to(torch.bfloat16) if not config.symmetric else None,
-        config=config,
-    )
+    return _to_int4_tensor(int_data, scale, zero_point, config)
 
 
 def dequantize_weight(
-    cw: CanonicalQuantizedWeight,
+    weight: torch.Tensor,
     dtype: torch.dtype = torch.float32,
 ) -> torch.Tensor:
-    """Dequantize a ``CanonicalQuantizedWeight`` back to a dense tensor.
+    """Dequantize a torchao quantized tensor back to a dense tensor."""
+    from torchao.quantization import IntxUnpackedToInt8Tensor
+    from torchao.quantization.quantize_.workflows.int4.int4_tensor import Int4Tensor
 
-    Inverse of ``quantize_weight``. Useful for embedding lookups (which
-    need dense weights) or for inspecting quantized values.
-    """
-    gs = cw.config.group_size
-    scale = cw.scale.float().repeat_interleave(gs, dim=-1)
-    qdata = cw.qdata.float()
-    # Symmetric 4-bit qdata is stored as unsigned [0, 15] (shifted +8 in
-    # quantize_weight). Undo the shift to recover signed [-8, 7] before
-    # scaling. (Q4_K is asymmetric and uses a zero field instead.)
-    if cw.config.bits == 4 and cw.zero is None:
-        qdata = qdata - 8
-    if cw.zero is not None:
-        zero = cw.zero.float().repeat_interleave(gs, dim=-1)
+    if isinstance(weight, Int4Tensor):
+        # Unpack nibbles
+        p = weight.qdata.to(torch.uint8)
+        low = (p & 0x0F).float()
+        high = ((p >> 4) & 0x0F).float()
+        qdata = torch.stack([low, high], dim=-1).reshape(weight.shape)
+        # Scale is (K//gs, N), transpose to (N, K//gs) for broadcast
+        gs = weight.block_size[-1]
+        scale = weight.scale.t().float().repeat_interleave(gs, dim=-1)
+        zero = weight.zero_point.t().float().repeat_interleave(gs, dim=-1)
         return ((qdata - zero) * scale).to(dtype)
-    return (qdata * scale).to(dtype)
+
+    if isinstance(weight, IntxUnpackedToInt8Tensor):
+        gs = weight.block_size[-1]
+        scale = weight.scale.float().repeat_interleave(gs, dim=-1)
+        zero = weight.zero_point.float().repeat_interleave(gs, dim=-1)
+        return ((weight.qdata.float() - zero) * scale).to(dtype)
+
+    raise TypeError(f"Cannot dequantize {type(weight).__name__}")
 
 
 # ---------------------------------------------------------------------------
@@ -217,32 +242,28 @@ def quantize_model(
     model: nn.Module,
     recipe: QuantRecipe,
     dtype: torch.dtype = torch.bfloat16,
-) -> tuple[dict[str, CanonicalQuantizedWeight], dict[str, torch.Tensor]]:
+) -> dict[str, torch.Tensor]:
     """Walk model parameters + persistent buffers, apply recipe.
 
-    For each parameter matched by a recipe rule: quantize to canonical.
-    Parameters that match ``None`` (skip) rules and persistent buffers go
-    into the unquantized dict (cast to ``dtype``). Non-persistent buffers
-    (KV cache, RoPE tables, etc.) are excluded.
-
-    Returns ``(quantized, unquantized)`` dicts keyed by FQN.
+    Returns a single state dict containing quantized tensor subclasses
+    (``Int4Tensor``, ``IntxUnpackedToInt8Tensor``) and unquantized plain
+    tensors. Non-persistent buffers (KV cache, RoPE tables) are excluded.
     """
-    quantized: dict[str, CanonicalQuantizedWeight] = {}
-    unquantized: dict[str, torch.Tensor] = {}
+    state: dict[str, torch.Tensor] = {}
     persistent_keys = set(model.state_dict().keys())
 
     n_params = sum(1 for _ in model.named_parameters())
     for i, (fqn, param) in enumerate(model.named_parameters()):
         config = recipe.get_config(fqn)
         if config is None:
-            unquantized[fqn] = param.data.to(dtype)
+            state[fqn] = param.data.to(dtype)
         else:
-            quantized[fqn] = quantize_weight(param.data, config)
+            state[fqn] = quantize_weight(param.data, config)
             print(f"  Quantized {i + 1}/{n_params}: {fqn}", end="\r")
     print()
 
     for fqn, buf in model.named_buffers():
-        if fqn in persistent_keys and fqn not in quantized:
-            unquantized[fqn] = buf.data
+        if fqn in persistent_keys and fqn not in state:
+            state[fqn] = buf.data
 
-    return quantized, unquantized
+    return state
