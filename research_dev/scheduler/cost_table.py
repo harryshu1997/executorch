@@ -69,7 +69,12 @@ _TABLE: dict[tuple[str, str], Cost] = {
     # fpc8+ hangs the Adreno driver hard enough to reboot the phone.
     # Output bytes: (1, 256, 1024) fp32 = 1 MB feature embeddings per clip.
     # See research_dev/vjepa2/export_vjepa2_vulkan_no3d.py.
-    ("vjepa2_vitl",  "phone"):   Cost(11800, 50.0, 1_048_576, "measured OP15 Adreno GPU Vulkan fp32, fpc2; energy estimate"),
+    # Phone: fpc2 fp32 = 11.8 s/inf (3-shot warm avg), fp16 = 11.0 s/inf
+    # (fp16 marginally faster; Adreno computes fp32 internally regardless).
+    # fpc4 fp32 = 149.8 s/inf, fpc4 fp16 = 300.7 s/inf (fp16 conversion
+    # overhead actually hurts at higher token counts). fpc8+ hangs the
+    # Adreno GPU driver hard enough to reboot the phone.
+    ("vjepa2_vitl",  "phone"):   Cost(11000, 50.0, 1_048_576, "measured OP15 Adreno GPU Vulkan fp16, fpc2; energy estimate"),
     ("vjepa2_vitl",  "server"):  Cost(  120, 30.0, 1_048_576, "estimate A6000 fp16 (~25x faster than phone)"),
     ("vjepa2_vitl",  "cloud"):   Cost(   90, 22.0, 1_048_576, "estimate A100 fp16"),
 
