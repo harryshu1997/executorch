@@ -69,14 +69,19 @@ _TABLE: dict[tuple[str, str], Cost] = {
     # fpc8+ hangs the Adreno driver hard enough to reboot the phone.
     # Output bytes: (1, 256, 1024) fp32 = 1 MB feature embeddings per clip.
     # See research_dev/vjepa2/export_vjepa2_vulkan_no3d.py.
-    # Phone: fpc2 fp32 = 11.8 s/inf (3-shot warm avg), fp16 = 11.0 s/inf
-    # (fp16 marginally faster; Adreno computes fp32 internally regardless).
-    # fpc4 fp32 = 149.8 s/inf, fpc4 fp16 = 300.7 s/inf (fp16 conversion
-    # overhead actually hurts at higher token counts). fpc8+ hangs the
-    # Adreno GPU driver hard enough to reboot the phone.
-    ("vjepa2_vitl",  "phone"):   Cost(11000, 50.0, 1_048_576, "measured OP15 Adreno GPU Vulkan fp16, fpc2; energy estimate"),
-    ("vjepa2_vitl",  "server"):  Cost(  120, 30.0, 1_048_576, "estimate A6000 fp16 (~25x faster than phone)"),
-    ("vjepa2_vitl",  "cloud"):   Cost(   90, 22.0, 1_048_576, "estimate A100 fp16"),
+    # Phone: vJEPA2 ViT-L on OP15 Adreno GPU (Vulkan, fp16, fpc2):
+    #   - cold first inference: ~14 s (warm-up dominated)
+    #   - burst steady state (20 iter): 3.55 s/inf
+    #   - sustained w/ thermal throttle (50 iter): 5.40 s/inf  <- realistic
+    # Sustained number used because AR sessions are continuous and the
+    # phone thermal throttles after ~70s of full-GPU work.
+    # fpc8+ hangs the Adreno GPU driver hard enough to reboot the phone.
+    #
+    # Server: MEASURED on A6000 fp16 fpc16 = 37 ms/inf (avg of 5 runs);
+    # full fpc64 = 153 ms/inf, 35 J/inf at 228W avg power.
+    ("vjepa2_vitl",  "phone"):   Cost(5400, 28.0, 1_048_576, "measured OP15 Adreno GPU Vulkan fp16 fpc2 sustained 50-iter"),
+    ("vjepa2_vitl",  "server"):  Cost(  37, 4.3,  1_048_576, "measured A6000 fp16 fpc16 5-iter avg, 117W"),
+    ("vjepa2_vitl",  "cloud"):   Cost(  28, 3.2,  1_048_576, "estimate A100 fp16 ~1.3x faster"),
 
     # VGGT_heads: no longer a separate row — StreamVGGT integrates them
     # into the per-frame streaming call. Left as zero-cost stubs for any

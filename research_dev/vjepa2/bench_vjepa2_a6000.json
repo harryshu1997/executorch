@@ -1,0 +1,114 @@
+{
+  "model_id": "facebook/vjepa2-vitl-fpc64-256",
+  "device": "cuda:1",
+  "rows": [
+    {
+      "frames": 2,
+      "dtype": "torch.float32",
+      "warm_ms": 377.40087509155273,
+      "avg_ms": 36.87758445739746,
+      "peak_vram_mb": 1331.017216,
+      "avg_power_w": 55.475,
+      "energy_J_per_inf": 2.045783997774124
+    },
+    {
+      "frames": 4,
+      "dtype": "torch.float32",
+      "warm_ms": 44.696807861328125,
+      "avg_ms": 39.46428298950195,
+      "peak_vram_mb": 1345.828352,
+      "avg_power_w": 100.01,
+      "energy_J_per_inf": 3.946822941780091
+    },
+    {
+      "frames": 8,
+      "dtype": "torch.float32",
+      "warm_ms": 46.88215255737305,
+      "avg_ms": 57.71169662475586,
+      "peak_vram_mb": 1376.892416,
+      "avg_power_w": 132.57,
+      "energy_J_per_inf": 7.650839621543883
+    },
+    {
+      "frames": 16,
+      "dtype": "torch.float32",
+      "warm_ms": 90.73734283447266,
+      "avg_ms": 136.15851402282715,
+      "peak_vram_mb": 1436.923392,
+      "avg_power_w": 224.86,
+      "energy_J_per_inf": 30.61660346317291
+    },
+    {
+      "frames": 32,
+      "dtype": "torch.float32",
+      "warm_ms": 231.6606044769287,
+      "avg_ms": 346.2852954864502,
+      "peak_vram_mb": 1558.558208,
+      "avg_power_w": 270.78,
+      "energy_J_per_inf": 93.76713231182097
+    },
+    {
+      "frames": 64,
+      "dtype": "torch.float32",
+      "warm_ms": 738.1234169006348,
+      "avg_ms": 1104.6132564544678,
+      "peak_vram_mb": 1801.82784,
+      "avg_power_w": 294.0783333333333,
+      "energy_J_per_inf": 324.84282543603575
+    },
+    {
+      "frames": 2,
+      "dtype": "torch.float16",
+      "warm_ms": 353.47485542297363,
+      "avg_ms": 38.238525390625,
+      "peak_vram_mb": 676.874752,
+      "avg_power_w": 267.94,
+      "energy_J_per_inf": 10.245630493164063
+    },
+    {
+      "frames": 4,
+      "dtype": "torch.float16",
+      "warm_ms": 48.825740814208984,
+      "avg_ms": 38.7575626373291,
+      "peak_vram_mb": 681.593856,
+      "avg_power_w": 146.54,
+      "energy_J_per_inf": 5.679533228874206
+    },
+    {
+      "frames": 8,
+      "dtype": "torch.float16",
+      "warm_ms": 43.36810111999512,
+      "avg_ms": 38.95611763000488,
+      "peak_vram_mb": 694.176256,
+      "avg_power_w": 100.73,
+      "energy_J_per_inf": 3.9240497288703917
+    },
+    {
+      "frames": 16,
+      "dtype": "torch.float16",
+      "warm_ms": 43.83993148803711,
+      "avg_ms": 36.99207305908203,
+      "peak_vram_mb": 725.109248,
+      "avg_power_w": 117.48,
+      "energy_J_per_inf": 4.345828742980957
+    },
+    {
+      "frames": 32,
+      "dtype": "torch.float16",
+      "warm_ms": 45.02415657043457,
+      "avg_ms": 66.28131866455078,
+      "peak_vram_mb": 784.353792,
+      "avg_power_w": 145.12,
+      "energy_J_per_inf": 9.61874496459961
+    },
+    {
+      "frames": 64,
+      "dtype": "torch.float16",
+      "warm_ms": 102.17022895812988,
+      "avg_ms": 153.42121124267578,
+      "peak_vram_mb": 905.988608,
+      "avg_power_w": 228.41500000000002,
+      "energy_J_per_inf": 35.04370596599579
+    }
+  ]
+}
