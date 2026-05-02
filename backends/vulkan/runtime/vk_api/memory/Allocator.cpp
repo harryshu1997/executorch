@@ -11,7 +11,12 @@
 namespace vkcompute {
 namespace vkapi {
 
-bool test_host_cached_available(VkPhysicalDevice physical_device) {
+// FIXED: was declared `bool` so the returned flag bits (0x400/0x800)
+// got truncated to 1 = VMA_ALLOCATION_CREATE_DEDICATED_MEMORY_BIT,
+// never actually setting HOST_ACCESS_*. That tripped a VMA assertion
+// at runtime when staging buffers were allocated for device-to-host
+// readback. Returning the proper VmaAllocationCreateFlags fixes it.
+VmaAllocationCreateFlags test_host_cached_available(VkPhysicalDevice physical_device) {
   VkPhysicalDeviceMemoryProperties mem_props;
   vkGetPhysicalDeviceMemoryProperties(physical_device, &mem_props);
 

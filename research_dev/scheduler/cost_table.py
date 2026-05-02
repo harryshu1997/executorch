@@ -59,6 +59,20 @@ _TABLE: dict[tuple[str, str], Cost] = {
     ("VGGT_encoder", "server"):  Cost( 545, 60.0, 6_440_000, "measured A6000 fp32, S=16 steady-state streaming"),
     ("VGGT_encoder", "cloud"):   Cost( 400, 45.0, 6_440_000, "estimate: A100 fp16 ~1.4x faster"),
 
+    # ---- vJEPA2 ViT-L (alternative phone-tier vision encoder) ----------
+    # Measured on OP15 Adreno GPU (Vulkan backend, fp32) after:
+    #   1. patching ExecuTorch's QNN_TENSOR_TYPE_MAP missing torch.float16
+    #   2. patching test_host_cached_available bool→VmaAllocationCreateFlags
+    #   3. rewriting Conv3d patch_embed → Conv2d (math-equivalent;
+    #      Vulkan/XNNPACK/portable all reject 5D conv).
+    # Avg 11.8 s/inference at fpc2 fp32 (3-shot warm). fpc4 takes 149.8 s.
+    # fpc8+ hangs the Adreno driver hard enough to reboot the phone.
+    # Output bytes: (1, 256, 1024) fp32 = 1 MB feature embeddings per clip.
+    # See research_dev/vjepa2/export_vjepa2_vulkan_no3d.py.
+    ("vjepa2_vitl",  "phone"):   Cost(11800, 50.0, 1_048_576, "measured OP15 Adreno GPU Vulkan fp32, fpc2; energy estimate"),
+    ("vjepa2_vitl",  "server"):  Cost(  120, 30.0, 1_048_576, "estimate A6000 fp16 (~25x faster than phone)"),
+    ("vjepa2_vitl",  "cloud"):   Cost(   90, 22.0, 1_048_576, "estimate A100 fp16"),
+
     # VGGT_heads: no longer a separate row — StreamVGGT integrates them
     # into the per-frame streaming call. Left as zero-cost stubs for any
     # trace that still references them, so existing traces don't break.
