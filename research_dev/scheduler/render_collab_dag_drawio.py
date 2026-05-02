@@ -1,18 +1,12 @@
 """
 Render a draw.io diagram for the 2-phone + (server | cloud) collaboration
 pattern. Two stacked panels: top = local server over wifi, bottom = cloud
-over cellular. Each panel has lanes for both phones' subsystems
-(NPU/CPU/HW264/Radio), plus the server or cloud lane.
+over cellular. Each panel shows ONE representative phone (both phones are
+identical and run in parallel — totals account for ×2). Lane structure:
+NPU / CPU / HW264 / Radio / Compute.
 
-Energy per task labelled in each box. Network energy on each upload arrow.
-Numbers are a mix of measured and estimated — sources marked.
-
-Synthetic 30 s timeline:
-  - VAD-detected utterances at t=4 s and t=18 s (each phone independently)
-  - Continuous motion capture on CPU (cheap, always on)
-  - Continuous H.264 encode → upload at 5 Mbps avg (one 2 s clip every 2 s)
-  - Server/Cloud runs vJEPA2 fpc16 (37 ms, 4.3 J) on each clip
-  - Gemma query event at t=10 s
+Energy per task labelled inside each box. Bigger fonts. 30 s synthetic
+timeline, with a clear summary panel for each setup and a comparison block.
 """
 from __future__ import annotations
 
@@ -22,80 +16,57 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 
-# ----- Constants -------------------------------------------------------------
+# ----- Layout constants ------------------------------------------------------
 
 T_MAX = 30.0
-PX_PER_S = 38
-LABEL_W = 230
-ORIGIN_X = LABEL_W + 20
+PX_PER_S = 56                    # time-axis scale (was 38)
+LABEL_W = 280                    # left lane-label column
+ORIGIN_X = LABEL_W + 30
 PANEL_W = ORIGIN_X + int(PX_PER_S * T_MAX) + 60
-LANE_H = 56
-LANE_GAP = 4
-HEADER_H = 70
-PANEL_GAP = 60
+LANE_H = 80                      # taller lanes for bigger fonts
+LANE_GAP = 8
+HEADER_H = 110
+SUMMARY_H = 130
+PANEL_GAP = 50
 
-# --- Energy estimates (J, J/s, J/B) ----
-# All marginal energy (above phone idle baseline of ~327 mW).
-# Phone-side radio energy is DEVICE-ONLY (modem RF + chain), NOT the
-# full network-infrastructure-amortized 0.030 kWh/GB / 0.117 kWh/GB
-# from the cost_table.py — those are too pessimistic for a single
-# phone's battery argument and would dwarf everything else here.
-
-# Measured (this session):
-# Whisper-Tiny on OP15 NPU (Hexagon v81 HMX/HVX): 117 ms total
-#   (105 ms enc + 11 ms dec + ~1 ms overhead).
-# NPU avg power during inference is ~1.5 W (HVX cores 0.2-0.4 W +
-# HMX matmul 0.5-1.5 W + DDR reads 0.2-0.5 W). Whisper is mostly
-# memory-bound so it sits at ~1.5 W avg, not the 3 W matmul peak.
-# Energy ≈ 0.117 s × 1.5 W = 0.176 J. Round to 0.18 J.
-ENERGY_WHISPER_PER_UTT = 0.18          # J — 117 ms × 1.5 W avg NPU
-ENERGY_VJEPA_SERVER_PER_CLIP = 4.3     # J — measured on A6000 fp16 fpc16
-ENERGY_GEMMA_PER_QUERY = 230.0         # J — measured A6000 bf16 50-tok
-# Estimated phone-side device-only:
-POWER_PHONE_CPU_MOTION = 0.030         # W — light CPU, ~3% util
-POWER_PHONE_HW_H264 = 0.030            # W — dedicated HW encoder block
-POWER_SERVER_IDLE = 30.0               # W — A6000 idle
-POWER_CLOUD_IDLE = 25.0                # W — A100 idle estimate
-# Phone modem energy (device-only):
-#  WiFi 802.11ac: ~1.5 W tx active, ~9 MB/s real ⇒ 0.167 J/MB
-#  4G/5G: ~2.5 W tx active, ~2 MB/s real (LTE)   ⇒ 1.25  J/MB
-J_PER_BYTE_WIFI = 1.67e-7              # 0.167 J/MB device-only
-J_PER_BYTE_CELL = 1.25e-6              # 1.25  J/MB device-only
-# Workload assumptions:
+# --- Energy estimates --------------------------------------------------------
+# Whisper-Tiny on OP15 NPU (Hexagon v81): 117 ms × ~1.5 W avg = 0.18 J.
+ENERGY_WHISPER_PER_UTT = 0.18
+ENERGY_VJEPA_SERVER_PER_CLIP = 4.3     # MEASURED on A6000 fp16 fpc16
+ENERGY_GEMMA_PER_QUERY = 230.0         # MEASURED on A6000 bf16 50-tok
+POWER_PHONE_CPU_MOTION = 0.030         # estimated
+POWER_PHONE_HW_H264 = 0.030            # estimated, dedicated HW block
+J_PER_BYTE_WIFI = 1.67e-7              # device-only modem ~0.167 J/MB
+J_PER_BYTE_CELL = 1.25e-6              # device-only modem ~1.25 J/MB
 H264_BITRATE_MBPS = 5.0
-H264_BYTES_PER_S = H264_BITRATE_MBPS * 1e6 / 8  # 625 KB/s
 CLIP_DUR_S = 2.0
-CLIP_BYTES = int(H264_BYTES_PER_S * CLIP_DUR_S)  # ~1.25 MB
-
-# Per-clip network energy
-WIFI_J_PER_CLIP = CLIP_BYTES * J_PER_BYTE_WIFI         # ~0.135 J
-CELL_J_PER_CLIP = CLIP_BYTES * J_PER_BYTE_CELL         # ~0.526 J
+CLIP_BYTES = int(H264_BITRATE_MBPS * 1e6 / 8 * CLIP_DUR_S)  # ~1.25 MB
+WIFI_J_PER_CLIP = CLIP_BYTES * J_PER_BYTE_WIFI    # ~0.21 J / clip
+CELL_J_PER_CLIP = CLIP_BYTES * J_PER_BYTE_CELL    # ~1.56 J / clip
 
 
-def t_to_x(t: float, x_origin: int) -> int:
-    return x_origin + int(PX_PER_S * t)
+def t_to_x(t: float) -> int:
+    return ORIGIN_X + int(PX_PER_S * t)
 
 
-# ----- Cell rendering helpers ------------------------------------------------
+# ----- Cell helpers ----------------------------------------------------------
 
 CELL = ('<mxCell id="{id}" value="{val}" style="{style}" vertex="1" '
         'parent="1"><mxGeometry x="{x}" y="{y}" width="{w}" height="{h}" '
         'as="geometry"/></mxCell>')
-EDGE = ('<mxCell id="{id}" value="{val}" style="{style}" edge="1" parent="1" '
-        'source="{src}" target="{dst}"><mxGeometry relative="1" '
-        'as="geometry"/></mxCell>')
 
 
 def box(cid, x, y, w, h, label, fill="#dae8fc", stroke="#6c8ebf",
-        font_size=9, rounded=True, font_color="#000"):
+        font_size=12, rounded=True, color="#000", bold=False):
     style = (f"rounded={'1' if rounded else '0'};whiteSpace=wrap;html=1;"
              f"fillColor={fill};strokeColor={stroke};fontSize={font_size};"
-             f"fontColor={font_color};align=center;verticalAlign=middle;")
+             f"fontColor={color};align=center;verticalAlign=middle;"
+             f"{'fontStyle=1;' if bold else ''}")
     return CELL.format(id=cid, val=escape(label), style=style,
                        x=x, y=y, w=w, h=h)
 
 
-def text(cid, x, y, w, h, label, font_size=11, bold=False, align="left",
+def text(cid, x, y, w, h, label, font_size=14, bold=False, align="left",
          color="#000"):
     style = (f"text;html=1;strokeColor=none;fillColor=none;align={align};"
              f"verticalAlign=middle;fontSize={font_size};fontColor={color};"
@@ -104,15 +75,16 @@ def text(cid, x, y, w, h, label, font_size=11, bold=False, align="left",
                        x=x, y=y, w=w, h=h)
 
 
-def edge(cid, src, dst, label="", color="#666", dashed=False, font_size=8):
-    style = (f"endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;"
-             f"entryX=0.5;entryY=0;strokeColor={color};fontSize={font_size};"
-             f"{'dashed=1;' if dashed else ''}")
-    return EDGE.format(id=cid, val=escape(label), style=style,
-                       src=src, dst=dst)
+# ----- Lane structure --------------------------------------------------------
 
+LANES_PER_PANEL = [
+    ("Phone NPU\nWhisper-Tiny",       "#d5e8d4", "#82b366"),
+    ("Phone CPU\nmotion / pixel-diff", "#fff2cc", "#d6b656"),
+    ("Phone HW H.264\nencoder",        "#f8cecc", "#b85450"),
+    ("Phone Radio\n(modem)",           "#dae8fc", "#6c8ebf"),
+    ("Compute tier",                    "#e1d5e7", "#9673a6"),
+]
 
-# ----- Synthetic event timeline (shared between panels) ----------------------
 
 @dataclass
 class Task:
@@ -123,198 +95,191 @@ class Task:
     label: str
     fill: str
     stroke: str
+    font_size: int = 11
 
 
-def gen_phone_lanes(phone_idx: int, link: str) -> list[Task]:
-    """Tasks for one phone (NPU / CPU / HW264 / Radio).
+# ----- Synthesize tasks for one panel ----------------------------------------
 
-    `link` is "wifi" or "cell" — affects radio energy label.
-    """
-    base_lane = 0 if phone_idx == 1 else 4  # phone 1 lanes 0-3, phone 2 lanes 4-7
+def gen_tasks(prefix: str, link: str) -> list[Task]:
     j_per_clip = WIFI_J_PER_CLIP if link == "wifi" else CELL_J_PER_CLIP
-
+    upload_dur = 0.10 if link == "wifi" else 0.50
     out: list[Task] = []
 
-    # Whisper utterances — phone 1 at t=4, phone 2 at t=18
-    utt_t = 4.0 if phone_idx == 1 else 18.0
+    # Whisper at t=8 (one utterance per phone in a 30s window, single shown)
     out.append(Task(
-        cid=f"p{phone_idx}_whisper_{link}",
-        lane=base_lane + 0,
-        t_start=utt_t, t_end=utt_t + 0.117,
-        label=f"Whisper-Tiny\n105 ms enc + 11 ms dec\n@ ~1.5 W NPU avg = {ENERGY_WHISPER_PER_UTT:.2f} J\n(latency measured, power est)",
-        fill="#d5e8d4", stroke="#82b366",
+        cid=f"{prefix}_whisper",
+        lane=0, t_start=8.0, t_end=8.117,
+        label=f"Whisper-Tiny\n105ms enc + 11ms dec\n0.18 J  (1.5W avg)",
+        fill="#d5e8d4", stroke="#82b366", font_size=11,
     ))
 
-    # Motion capture: continuous green stripe, label energy/sec
-    motion_J_total = POWER_PHONE_CPU_MOTION * T_MAX
+    # Motion CPU continuous bar
+    motion_J = POWER_PHONE_CPU_MOTION * T_MAX
     out.append(Task(
-        cid=f"p{phone_idx}_motion_{link}",
-        lane=base_lane + 1,
-        t_start=0, t_end=T_MAX,
-        label=f"motion / pixel-diff (CPU)  {POWER_PHONE_CPU_MOTION*1000:.0f} mW  → {motion_J_total:.2f} J / 30s  (est)",
+        cid=f"{prefix}_motion",
+        lane=1, t_start=0, t_end=T_MAX,
+        label=(f"continuous motion + pixel-diff\n"
+               f"30 mW × 30 s  =  {motion_J:.2f} J  (estimate)"),
         fill="#fff2cc", stroke="#d6b656",
     ))
 
-    # H.264 encode: continuous, encoder is cheap
-    h264_J_total = POWER_PHONE_HW_H264 * T_MAX
+    # H.264 continuous bar
+    h264_J = POWER_PHONE_HW_H264 * T_MAX
     out.append(Task(
-        cid=f"p{phone_idx}_h264_{link}",
-        lane=base_lane + 2,
-        t_start=0, t_end=T_MAX,
-        label=f"HW H.264 encoder  {POWER_PHONE_HW_H264*1000:.0f} mW  → {h264_J_total:.2f} J / 30s  (est, dedicated block)",
+        cid=f"{prefix}_h264",
+        lane=2, t_start=0, t_end=T_MAX,
+        label=(f"HW H.264 encoder (continuous)\n"
+               f"30 mW × 30 s  =  {h264_J:.2f} J  (estimate)"),
         fill="#f8cecc", stroke="#b85450",
     ))
 
-    # Radio uploads: every 2 s, one 2-s clip = ~1.25 MB → 100 ms wifi or 500 ms cell
-    upload_dur = 0.10 if link == "wifi" else 0.50
+    # Radio uploads — one box per clip
     n_clips = int(T_MAX / CLIP_DUR_S)
     radio_total = n_clips * j_per_clip
     for i in range(n_clips):
-        t = i * CLIP_DUR_S + 0.05  # tiny offset so 1st clip starts at 0.05
+        t = i * CLIP_DUR_S + 0.05
         out.append(Task(
-            cid=f"p{phone_idx}_up_{link}_{i}",
-            lane=base_lane + 3,
-            t_start=t, t_end=t + upload_dur,
-            label=(f"upload 1.25 MB\n{j_per_clip*1000:.0f} mJ  ({link})"
-                   if i == 0 else ""),
+            cid=f"{prefix}_up_{i}",
+            lane=3, t_start=t, t_end=t + upload_dur,
+            label=(f"upload\n1.25 MB H.264\n{j_per_clip*1000:.0f} mJ"
+                   if i == 0 else f"{j_per_clip*1000:.0f} mJ"),
             fill="#dae8fc" if link == "wifi" else "#ffe6cc",
             stroke="#6c8ebf" if link == "wifi" else "#d79b00",
+            font_size=10,
         ))
-    return out
 
-
-def gen_compute_lane(link: str, lane: int) -> list[Task]:
-    """Server (or cloud) lane: vJEPA2 inference per clip + Gemma query."""
-    out: list[Task] = []
-    n_clips = int(T_MAX / CLIP_DUR_S)
-    # Each phone uploads every 2s; server processes both phones' clips
-    # round-robin. Inference is 37 ms each.
+    # Compute: vJEPA2 inferences per clip × 2 phones, plus 1 Gemma query
     inference_dur = 0.037
-    n_inferences = n_clips * 2  # two phones
-    for i in range(n_inferences):
-        # Stagger inferences right after upload completes
-        phone_idx = i % 2 + 1
-        clip_idx = i // 2
-        t_upload_done = clip_idx * CLIP_DUR_S + 0.05 + (
-            0.10 if link == "wifi" else 0.50
-        )
-        # Inferences are sequential on the server
-        t = t_upload_done + (i % 2) * 0.05  # small gap if both arrive at once
-        out.append(Task(
-            cid=f"compute_vjepa_{link}_{i}",
-            lane=lane,
-            t_start=t, t_end=t + inference_dur,
-            label=(f"vJEPA2 fp16 fpc16\n37 ms · 4.3 J  (measured)"
-                   if i == 0 else ""),
-            fill="#e1d5e7", stroke="#9673a6",
-        ))
-    # Gemma query at t=10
+    gap = 0.05
+    for clip_idx in range(n_clips):
+        for phone_idx in range(2):
+            t_upload_done = clip_idx * CLIP_DUR_S + 0.05 + upload_dur
+            t = t_upload_done + phone_idx * gap
+            out.append(Task(
+                cid=f"{prefix}_vjepa_{clip_idx}_{phone_idx}",
+                lane=4, t_start=t, t_end=t + max(0.4, inference_dur),
+                # widen visibly so it's not invisible
+                label=("vJEPA2 fp16 fpc16\n37 ms × 4.3 J  (measured)"
+                       if clip_idx == 0 and phone_idx == 0 else "vJEPA2"),
+                fill="#e1d5e7", stroke="#9673a6", font_size=10,
+            ))
     out.append(Task(
-        cid=f"compute_gemma_{link}",
-        lane=lane,
-        t_start=10.0, t_end=11.9,
-        label=f"Gemma-4-E2B query\n1.9 s · {ENERGY_GEMMA_PER_QUERY:.0f} J  (measured)",
-        fill="#ffe6cc", stroke="#d79b00",
+        cid=f"{prefix}_gemma",
+        lane=4, t_start=14.0, t_end=15.9,
+        label=f"Gemma-4-E2B query\n1.9 s · 230 J  (measured)",
+        fill="#ffe6cc", stroke="#d79b00", font_size=12,
     ))
     return out
 
 
-# ----- Panel rendering -------------------------------------------------------
+# ----- Panel renderer --------------------------------------------------------
 
-PANEL_LANES_LABELS = [
-    ("Phone 1 — NPU (Whisper)",    "#d5e8d4", "#82b366"),
-    ("Phone 1 — CPU (motion)",     "#fff2cc", "#d6b656"),
-    ("Phone 1 — HW H.264 encoder", "#f8cecc", "#b85450"),
-    ("Phone 1 — Radio",            "#dae8fc", "#6c8ebf"),
-    ("Phone 2 — NPU (Whisper)",    "#d5e8d4", "#82b366"),
-    ("Phone 2 — CPU (motion)",     "#fff2cc", "#d6b656"),
-    ("Phone 2 — HW H.264 encoder", "#f8cecc", "#b85450"),
-    ("Phone 2 — Radio",            "#dae8fc", "#6c8ebf"),
-]
+def panel_height() -> int:
+    return HEADER_H + 30 + len(LANES_PER_PANEL) * (LANE_H + LANE_GAP) + SUMMARY_H
 
 
-def render_panel(prefix: str, y0: int, link: str, compute_label: str,
-                 compute_fill: str) -> tuple[list[str], dict]:
-    """Render one collaboration panel (server-wifi or cloud-cell).
-
-    Returns the list of cell strings and an energy summary dict.
-    """
+def render_panel(prefix: str, y0: int, link: str, title: str,
+                 subtitle: str) -> tuple[list[str], dict]:
     cells: list[str] = []
-    n_lanes = len(PANEL_LANES_LABELS) + 1  # phones + compute
 
-    # Panel header
-    cells.append(text(
-        f"{prefix}_title", 20, y0, PANEL_W - 40, 24,
-        f"{compute_label}",
-        font_size=15, bold=True))
+    # Title block
+    cells.append(box(f"{prefix}_title_bg", 20, y0, PANEL_W - 40, 60,
+                     "", fill="#e8eef9" if link == "wifi" else "#fff0e0",
+                     stroke="#666", rounded=True))
+    cells.append(text(f"{prefix}_title", 30, y0 + 4, PANEL_W - 60, 30,
+                      title, font_size=20, bold=True))
+    cells.append(text(f"{prefix}_sub", 30, y0 + 32, PANEL_W - 60, 24,
+                      subtitle, font_size=12, color="#444"))
 
-    # Time axis
-    axis_y = y0 + 38
-    for s in range(0, int(T_MAX) + 1, 2):
-        x = t_to_x(s, ORIGIN_X)
-        cells.append(box(f"{prefix}_tick_{s}", x, axis_y, 1, 6, "",
+    axis_y = y0 + 75
+    # Time axis ticks every 5 s
+    for s in range(0, int(T_MAX) + 1, 5):
+        x = t_to_x(s)
+        cells.append(box(f"{prefix}_tk_{s}", x, axis_y, 1, 8, "",
                          fill="#000", stroke="#000", rounded=False))
-        cells.append(text(f"{prefix}_ticklbl_{s}", x - 12, axis_y + 6, 30, 12,
-                          f"{s}s", font_size=8, align="center"))
-    cells.append(box(f"{prefix}_axisline", ORIGIN_X, axis_y + 3,
+        cells.append(text(f"{prefix}_tklbl_{s}", x - 18, axis_y + 8, 36, 18,
+                          f"{s} s", font_size=11, align="center"))
+    cells.append(box(f"{prefix}_axis", ORIGIN_X, axis_y + 4,
                      int(PX_PER_S * T_MAX), 1, "",
                      fill="#000", stroke="#000", rounded=False))
 
-    lane_y0 = axis_y + 22
+    lane_y0 = axis_y + 30
 
-    # Phone lanes
-    labels = list(PANEL_LANES_LABELS) + [(compute_label,
-                                           compute_fill, "#444")]
-    for i, (name, fill, stroke) in enumerate(labels):
+    # Lanes
+    for i, (name, fill, stroke) in enumerate(LANES_PER_PANEL):
         y = lane_y0 + i * (LANE_H + LANE_GAP)
         cells.append(box(f"{prefix}_lbl_{i}", 10, y, LABEL_W - 10, LANE_H,
-                         name, fill="#fafafa", stroke="#bbb",
-                         font_size=10, rounded=False))
+                         name, fill="#fafafa", stroke="#888",
+                         font_size=13, bold=True, rounded=False))
         cells.append(box(f"{prefix}_bg_{i}", ORIGIN_X, y,
                          int(PX_PER_S * T_MAX), LANE_H,
-                         "", fill=fill, stroke="#dddddd", rounded=False))
+                         "", fill=fill, stroke="#bbb", rounded=False))
 
-    # Tasks for phone 1 + phone 2 + compute
-    all_tasks = (gen_phone_lanes(1, link) + gen_phone_lanes(2, link)
-                 + gen_compute_lane(link, len(PANEL_LANES_LABELS)))
-    for task in all_tasks:
-        x = t_to_x(task.t_start, ORIGIN_X)
-        w = max(8, t_to_x(task.t_end, ORIGIN_X) - x)
-        ly = lane_y0 + task.lane * (LANE_H + LANE_GAP) + 4
-        h = LANE_H - 8
-        cells.append(box(f"{prefix}_{task.cid}", x, ly, w, h,
-                         task.label, fill=task.fill, stroke=task.stroke,
-                         font_size=8))
+    # Tasks
+    for task in gen_tasks(prefix, link):
+        x = t_to_x(task.t_start)
+        w = max(12, t_to_x(task.t_end) - x)
+        ly = lane_y0 + task.lane * (LANE_H + LANE_GAP) + 6
+        h = LANE_H - 12
+        cells.append(box(f"{prefix}_{task.cid}", x, ly, w, h, task.label,
+                         fill=task.fill, stroke=task.stroke,
+                         font_size=task.font_size))
 
-    # Energy summary box at the bottom of the panel
+    # Summary panel
     j_per_clip = WIFI_J_PER_CLIP if link == "wifi" else CELL_J_PER_CLIP
-    n_clips_per_phone = int(T_MAX / CLIP_DUR_S)
-    radio_per_phone = n_clips_per_phone * j_per_clip
+    n_clips = int(T_MAX / CLIP_DUR_S)
+    radio_per_phone = n_clips * j_per_clip
     motion_per_phone = POWER_PHONE_CPU_MOTION * T_MAX
     h264_per_phone = POWER_PHONE_HW_H264 * T_MAX
-    whisper_per_phone = ENERGY_WHISPER_PER_UTT  # 1 utterance in 30 s
+    whisper_per_phone = ENERGY_WHISPER_PER_UTT
     total_phone = (radio_per_phone + motion_per_phone
                    + h264_per_phone + whisper_per_phone)
-    n_inferences_total = n_clips_per_phone * 2  # 2 phones
-    total_compute = (n_inferences_total * ENERGY_VJEPA_SERVER_PER_CLIP
-                     + ENERGY_GEMMA_PER_QUERY)
+    n_compute = n_clips * 2
+    total_compute = n_compute * ENERGY_VJEPA_SERVER_PER_CLIP + ENERGY_GEMMA_PER_QUERY
     grand_total = 2 * total_phone + total_compute
 
-    summary_y = lane_y0 + n_lanes * (LANE_H + LANE_GAP) + 14
-    summary_lines = [
-        f"30 s session energy ({link}):",
-        f"  Each phone:  Whisper {whisper_per_phone:.2f} J  +  motion CPU {motion_per_phone:.2f} J  "
-        f"+  HW264 {h264_per_phone:.2f} J  +  radio {radio_per_phone:.2f} J  "
-        f"=  {total_phone:.2f} J/phone",
-        f"  Compute (2 phones × {n_clips_per_phone} clips = {n_inferences_total} inf): "
-        f"{n_inferences_total} × 4.3 J + 1 × 230 J Gemma  =  {total_compute:.0f} J",
-        f"  TOTAL session: 2 × {total_phone:.1f}  +  {total_compute:.0f}  =  {grand_total:.0f} J",
-    ]
-    cells.append(box(f"{prefix}_summary",
-                     20, summary_y, PANEL_W - 40, 76,
-                     "\n".join(summary_lines),
-                     fill="#fff", stroke="#444", font_size=10,
-                     rounded=True))
+    sy = lane_y0 + len(LANES_PER_PANEL) * (LANE_H + LANE_GAP) + 12
+    # Three-column summary: per phone | compute | total
+    col_w = (PANEL_W - 60) // 3
+    col_x = [20, 20 + col_w + 10, 20 + 2 * (col_w + 10)]
+
+    per_phone_text = (
+        f"PER PHONE  (× 2 phones)\n\n"
+        f"Whisper × 1 utt:   {whisper_per_phone:.2f} J\n"
+        f"motion CPU × 30s:  {motion_per_phone:.2f} J\n"
+        f"HW H.264 × 30s:    {h264_per_phone:.2f} J\n"
+        f"radio × {n_clips} clips:    {radio_per_phone:.2f} J\n"
+        f"────────────────────\n"
+        f"Σ per phone =  {total_phone:.2f} J"
+    )
+    compute_label = "SERVER (A6000)" if link == "wifi" else "CLOUD (A100 est)"
+    compute_text = (
+        f"{compute_label}\n\n"
+        f"vJEPA2 inf × {n_compute}:    {n_compute * ENERGY_VJEPA_SERVER_PER_CLIP:.0f} J\n"
+        f"  ({n_compute} × 4.3 J each, fp16 fpc16)\n"
+        f"Gemma query × 1:    {ENERGY_GEMMA_PER_QUERY:.0f} J\n"
+        f"  (1.9 s, 50-tok response)\n"
+        f"────────────────────\n"
+        f"Σ compute =  {total_compute:.0f} J"
+    )
+    total_text = (
+        f"30 s SESSION TOTAL\n\n"
+        f"2 × {total_phone:.2f} J phones\n"
+        f"+ {total_compute:.0f} J compute\n"
+        f"────────────────────\n"
+        f"GRAND TOTAL =\n  {grand_total:.0f} J"
+    )
+
+    cells.append(box(f"{prefix}_sum1", col_x[0], sy, col_w, SUMMARY_H - 16,
+                     per_phone_text, fill="#fff", stroke="#82b366",
+                     font_size=12, rounded=True))
+    cells.append(box(f"{prefix}_sum2", col_x[1], sy, col_w, SUMMARY_H - 16,
+                     compute_text, fill="#fff", stroke="#9673a6",
+                     font_size=12, rounded=True))
+    cells.append(box(f"{prefix}_sum3", col_x[2], sy, col_w, SUMMARY_H - 16,
+                     total_text, fill="#fff",
+                     stroke="#444",
+                     font_size=14, bold=True, rounded=True))
 
     return cells, {
         "phone_total": total_phone,
@@ -324,56 +289,66 @@ def render_panel(prefix: str, y0: int, link: str, compute_label: str,
     }
 
 
-# ----- Top-level XML build ---------------------------------------------------
+# ----- Top-level -------------------------------------------------------------
 
 def build() -> tuple[str, dict, dict]:
-    panel_height = (HEADER_H + 22 + len(PANEL_LANES_LABELS) * (LANE_H + LANE_GAP)
-                    + (LANE_H + LANE_GAP) + 90)
-    total_h = 60 + panel_height + PANEL_GAP + panel_height + 100
+    p_h = panel_height()
+    cmp_h = 130
+    total_h = 60 + p_h + PANEL_GAP + p_h + 30 + cmp_h + 20
 
     cells: list[str] = []
 
-    # Top title
     cells.append(text(
-        "title", 20, 10, PANEL_W - 40, 28,
-        "2-phone collaboration: local server (wifi) vs cloud (cellular) — "
-        "30 s synthetic AR/VR session",
-        font_size=18, bold=True))
+        "title", 20, 10, PANEL_W - 40, 32,
+        "Multi-model collaboration: 2 phones × (Whisper / motion / H.264 / radio) "
+        "→ vJEPA2 on server vs cloud",
+        font_size=22, bold=True))
     cells.append(text(
-        "subtitle", 20, 40, PANEL_W - 40, 18,
-        "Each phone: Whisper on NPU on speech, continuous motion (CPU), "
-        "HW H.264 encode, radio uploads 1.25 MB clips every 2 s. "
-        "Compute tier runs vJEPA2 fp16 fpc16 on each clip + Gemma on user query.",
-        font_size=10, color="#555"))
+        "subtitle", 20, 42, PANEL_W - 40, 22,
+        "30 s synthetic AR/VR session  ·  1 utterance per phone  ·  "
+        "1 clip every 2 s  ·  1 user query @ t=14 s  ·  energy per step",
+        font_size=13, color="#555"))
 
-    panel1_y = 70
+    panel1_y = 75
     cells1, sum1 = render_panel(
         "wifi", panel1_y, "wifi",
-        "Local Server (A6000) ← phones over WiFi", "#e1d5e7")
+        "Local Server (A6000) over WiFi",
+        "Phones upload 1.25 MB H.264 clips every 2 s · radio energy device-only ~0.17 J/MB")
     cells.extend(cells1)
 
-    panel2_y = panel1_y + panel_height + PANEL_GAP
+    panel2_y = panel1_y + p_h + PANEL_GAP
     cells2, sum2 = render_panel(
         "cell", panel2_y, "cell",
-        "Cloud (A100 estimate) ← phones over Cellular", "#ffe6cc")
+        "Cloud (A100 est) over Cellular",
+        "Same workload, cellular modem device-only ~1.25 J/MB (≈ 7.5× WiFi)")
     cells.extend(cells2)
 
-    # Comparison summary at bottom
+    # Comparison block
+    cy = panel2_y + p_h + 30
     diff_phone = sum2["phone_total"] - sum1["phone_total"]
     diff_grand = sum2["grand_total"] - sum1["grand_total"]
-    cmp_y = panel2_y + panel_height + 20
-    cmp = [
-        "Side-by-side: cloud over cellular costs MORE per phone (radio dominates the diff):",
-        f"  per-phone  wifi: {sum1['phone_total']:.2f} J   cell: {sum2['phone_total']:.2f} J   "
-        f"Δ = +{diff_phone:.2f} J  (~{100*diff_phone/sum1['phone_total']:.0f}% more per phone)",
-        f"  full session  wifi: {sum1['grand_total']:.0f} J   cell: {sum2['grand_total']:.0f} J   "
-        f"Δ = +{diff_grand:.0f} J  (~{100*diff_grand/sum1['grand_total']:.0f}% more total)",
-        "Note: server vs cloud compute energy assumed equal here. Real cloud may be 10-30% lower per inf "
-        "if A100/H100 fp16 is faster than A6000 fp16.",
+    pct_phone = 100 * diff_phone / sum1["phone_total"]
+    pct_grand = 100 * diff_grand / sum1["grand_total"]
+    cmp_lines = [
+        "SIDE-BY-SIDE  (same compute on each tier; diff is purely radio)",
+        "",
+        f"  Per-phone marginal energy   wifi  {sum1['phone_total']:>6.2f} J     "
+        f"cell  {sum2['phone_total']:>6.2f} J     "
+        f"Δ = +{diff_phone:.2f} J  (+{pct_phone:.0f}% per phone)",
+        f"  Compute tier total          server {sum1['compute_total']:>5.0f} J     "
+        f"cloud {sum2['compute_total']:>5.0f} J     "
+        f"Δ = 0 J  (assumed equal; A100 may be 10-30 % less)",
+        f"  Grand total (2 phones)      wifi  {sum1['grand_total']:>6.0f} J     "
+        f"cell  {sum2['grand_total']:>6.0f} J     "
+        f"Δ = +{diff_grand:.0f} J  (+{pct_grand:.0f}% session total)",
+        "",
+        "Takeaway: at 2-second clip cadence, server compute (≈ 90 % of total) "
+        "dominates the radio difference. The phone-side cellular penalty is real "
+        "(5×) but small in absolute terms.",
     ]
-    cells.append(box("cmp", 20, cmp_y, PANEL_W - 40, 88,
-                     "\n".join(cmp),
-                     fill="#f0f0ff", stroke="#446", font_size=10))
+    cells.append(box("cmp", 20, cy, PANEL_W - 40, cmp_h,
+                     "\n".join(cmp_lines), fill="#f5f5ff", stroke="#444",
+                     font_size=13))
 
     inner = "\n        ".join(cells)
     xml = f"""<mxfile host="research_dev" type="device">
@@ -399,19 +374,18 @@ def main() -> None:
     ap.add_argument("--out",
                     default="research_dev/multi_model_collab.drawio")
     args = ap.parse_args()
-
-    xml, sum_wifi, sum_cell = build()
+    xml, s1, s2 = build()
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(xml)
     print(f"wrote {out} ({out.stat().st_size} bytes)")
-    print(f"\n30s synthetic session energy (2 phones):")
-    print(f"  WiFi+Server:    {sum_wifi['grand_total']:.1f} J  "
-          f"(per-phone {sum_wifi['phone_total']:.2f} J · compute {sum_wifi['compute_total']:.0f} J)")
-    print(f"  Cellular+Cloud: {sum_cell['grand_total']:.1f} J  "
-          f"(per-phone {sum_cell['phone_total']:.2f} J · compute {sum_cell['compute_total']:.0f} J)")
-    print(f"  Δ phone radio energy:  +{sum_cell['radio_per_phone'] - sum_wifi['radio_per_phone']:.2f} J/phone "
-          f"(cellular = {sum_cell['radio_per_phone']:.2f} J vs wifi {sum_wifi['radio_per_phone']:.2f} J)")
+    print(f"\n30 s session, 2 phones:")
+    print(f"  WiFi+Server:    {s1['grand_total']:>6.1f} J  "
+          f"(per-phone {s1['phone_total']:.2f} · compute {s1['compute_total']:.0f})")
+    print(f"  Cellular+Cloud: {s2['grand_total']:>6.1f} J  "
+          f"(per-phone {s2['phone_total']:.2f} · compute {s2['compute_total']:.0f})")
+    print(f"  Δ phone radio: +{s2['radio_per_phone'] - s1['radio_per_phone']:.2f} J/phone "
+          f"(cell={s2['radio_per_phone']:.2f}, wifi={s1['radio_per_phone']:.2f})")
 
 
 if __name__ == "__main__":
