@@ -42,7 +42,13 @@ PANEL_GAP = 60
 # phone's battery argument and would dwarf everything else here.
 
 # Measured (this session):
-ENERGY_WHISPER_PER_UTT = 0.12          # J — NPU peak ~1 W × 117 ms
+# Whisper-Tiny on OP15 NPU (Hexagon v81 HMX/HVX): 117 ms total
+#   (105 ms enc + 11 ms dec + ~1 ms overhead).
+# NPU avg power during inference is ~1.5 W (HVX cores 0.2-0.4 W +
+# HMX matmul 0.5-1.5 W + DDR reads 0.2-0.5 W). Whisper is mostly
+# memory-bound so it sits at ~1.5 W avg, not the 3 W matmul peak.
+# Energy ≈ 0.117 s × 1.5 W = 0.176 J. Round to 0.18 J.
+ENERGY_WHISPER_PER_UTT = 0.18          # J — 117 ms × 1.5 W avg NPU
 ENERGY_VJEPA_SERVER_PER_CLIP = 4.3     # J — measured on A6000 fp16 fpc16
 ENERGY_GEMMA_PER_QUERY = 230.0         # J — measured A6000 bf16 50-tok
 # Estimated phone-side device-only:
@@ -135,7 +141,7 @@ def gen_phone_lanes(phone_idx: int, link: str) -> list[Task]:
         cid=f"p{phone_idx}_whisper_{link}",
         lane=base_lane + 0,
         t_start=utt_t, t_end=utt_t + 0.117,
-        label=f"Whisper-Tiny\n105 ms enc + 11 ms dec\n{ENERGY_WHISPER_PER_UTT:.2f} J  (measured)",
+        label=f"Whisper-Tiny\n105 ms enc + 11 ms dec\n@ ~1.5 W NPU avg = {ENERGY_WHISPER_PER_UTT:.2f} J\n(latency measured, power est)",
         fill="#d5e8d4", stroke="#82b366",
     ))
 

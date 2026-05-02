@@ -63,7 +63,8 @@
         <mxCell id="wifi_bg_8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#dddddd;fontSize=9;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="610" width="1140" height="56" as="geometry"/></mxCell>
         <mxCell id="wifi_p1_whisper_wifi" value="Whisper-Tiny
 105 ms enc + 11 ms dec
-0.12 J  (measured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="402" y="134" width="8" height="48" as="geometry"/></mxCell>
+@ ~1.5 W NPU avg = 0.18 J
+(latency measured, power est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="402" y="134" width="8" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p1_motion_wifi" value="motion / pixel-diff (CPU)  30 mW  → 0.90 J / 30s  (est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="194" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p1_h264_wifi" value="HW H.264 encoder  30 mW  → 0.90 J / 30s  (est, dedicated block)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="254" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p1_up_wifi_0" value="upload 1.25 MB
@@ -84,7 +85,8 @@
         <mxCell id="wifi_p1_up_wifi_14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="1315" y="314" width="8" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p2_whisper_wifi" value="Whisper-Tiny
 105 ms enc + 11 ms dec
-0.12 J  (measured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="934" y="374" width="8" height="48" as="geometry"/></mxCell>
+@ ~1.5 W NPU avg = 0.18 J
+(latency measured, power est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="934" y="374" width="8" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p2_motion_wifi" value="motion / pixel-diff (CPU)  30 mW  → 0.90 J / 30s  (est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="434" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p2_h264_wifi" value="HW H.264 encoder  30 mW  → 0.90 J / 30s  (est, dedicated block)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="494" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_p2_up_wifi_0" value="upload 1.25 MB
@@ -137,7 +139,7 @@
         <mxCell id="wifi_compute_gemma_wifi" value="Gemma-4-E2B query
 1.9 s · 230 J  (measured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="630" y="614" width="72" height="48" as="geometry"/></mxCell>
         <mxCell id="wifi_summary" value="30 s session energy (wifi):
-  Each phone:  Whisper 0.12 J  +  motion CPU 0.90 J  +  HW264 0.90 J  +  radio 3.13 J  =  5.05 J/phone
+  Each phone:  Whisper 0.18 J  +  motion CPU 0.90 J  +  HW264 0.90 J  +  radio 3.13 J  =  5.11 J/phone
   Compute (2 phones × 15 clips = 30 inf): 30 × 4.3 J + 1 × 230 J Gemma  =  359 J
   TOTAL session: 2 × 5.1  +  359  =  369 J" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#444;fontSize=10;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="20" y="684" width="1410" height="76" as="geometry"/></mxCell>
         <mxCell id="cell_title" value="Cloud (A100 estimate) ← phones over Cellular" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontColor=#000;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="20" y="852" width="1410" height="24" as="geometry"/></mxCell>
@@ -194,7 +196,8 @@
         <mxCell id="cell_bg_8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#dddddd;fontSize=9;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="1392" width="1140" height="56" as="geometry"/></mxCell>
         <mxCell id="cell_p1_whisper_cell" value="Whisper-Tiny
 105 ms enc + 11 ms dec
-0.12 J  (measured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="402" y="916" width="8" height="48" as="geometry"/></mxCell>
+@ ~1.5 W NPU avg = 0.18 J
+(latency measured, power est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="402" y="916" width="8" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p1_motion_cell" value="motion / pixel-diff (CPU)  30 mW  → 0.90 J / 30s  (est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="976" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p1_h264_cell" value="HW H.264 encoder  30 mW  → 0.90 J / 30s  (est, dedicated block)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="1036" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p1_up_cell_0" value="upload 1.25 MB
@@ -215,7 +218,8 @@
         <mxCell id="cell_p1_up_cell_14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="1315" y="1096" width="19" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p2_whisper_cell" value="Whisper-Tiny
 105 ms enc + 11 ms dec
-0.12 J  (measured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="934" y="1156" width="8" height="48" as="geometry"/></mxCell>
+@ ~1.5 W NPU avg = 0.18 J
+(latency measured, power est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="934" y="1156" width="8" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p2_motion_cell" value="motion / pixel-diff (CPU)  30 mW  → 0.90 J / 30s  (est)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="1216" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p2_h264_cell" value="HW H.264 encoder  30 mW  → 0.90 J / 30s  (est, dedicated block)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="250" y="1276" width="1140" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_p2_up_cell_0" value="upload 1.25 MB
@@ -268,11 +272,11 @@
         <mxCell id="cell_compute_gemma_cell" value="Gemma-4-E2B query
 1.9 s · 230 J  (measured)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=8;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="630" y="1396" width="72" height="48" as="geometry"/></mxCell>
         <mxCell id="cell_summary" value="30 s session energy (cell):
-  Each phone:  Whisper 0.12 J  +  motion CPU 0.90 J  +  HW264 0.90 J  +  radio 23.44 J  =  25.36 J/phone
+  Each phone:  Whisper 0.18 J  +  motion CPU 0.90 J  +  HW264 0.90 J  +  radio 23.44 J  =  25.42 J/phone
   Compute (2 phones × 15 clips = 30 inf): 30 × 4.3 J + 1 × 230 J Gemma  =  359 J
   TOTAL session: 2 × 25.4  +  359  =  410 J" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#444;fontSize=10;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="20" y="1466" width="1410" height="76" as="geometry"/></mxCell>
         <mxCell id="cmp" value="Side-by-side: cloud over cellular costs MORE per phone (radio dominates the diff):
-  per-phone  wifi: 5.05 J   cell: 25.36 J   Δ = +20.31 J  (~402% more per phone)
+  per-phone  wifi: 5.11 J   cell: 25.42 J   Δ = +20.31 J  (~397% more per phone)
   full session  wifi: 369 J   cell: 410 J   Δ = +41 J  (~11% more total)
 Note: server vs cloud compute energy assumed equal here. Real cloud may be 10-30% lower per inf if A100/H100 fp16 is faster than A6000 fp16." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0f0ff;strokeColor=#446;fontSize=10;fontColor=#000;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="20" y="1594" width="1410" height="88" as="geometry"/></mxCell>
       </root>
